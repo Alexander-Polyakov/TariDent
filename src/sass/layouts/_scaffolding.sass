@@ -15,8 +15,6 @@
     appearance: none
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700')
-+font-face('ffbold', '../fonts/core_sans_m_65_bold')
-
 
 $blue: #36639d
 $blueDark: #2f5789
@@ -863,7 +861,6 @@ body
     &__main
         padding: 20px
         background-color: #fff
-        box-shadow: 0 5px 10px rgba(102, 102, 102, 0.35)
     &__more-link
         padding-top: 15px
         text-align: right
@@ -1002,6 +999,10 @@ body
     background-color: #cbe3ef
     padding: 10px
     font-size: 14px
+    display: flex
+    align-items: center
+    &__input
+        margin-right: 5px
     a
         color: inherit
         &:hover
@@ -1048,6 +1049,7 @@ body
 .accordion-list
     &__item
         margin-bottom: 30px
+        box-shadow: 0 5px 10px rgba(102, 102, 102, 0.35)
         &:last-child
             margin-bottom: 0
 
@@ -1282,6 +1284,11 @@ body
 @media screen and (max-width: 992px)
     body
         font-size: 14px
+
+    .doctor-short-card
+        &__photo
+            width: 170px
+            height: 220px
 
     .header-main-box
         padding-top: 20px
