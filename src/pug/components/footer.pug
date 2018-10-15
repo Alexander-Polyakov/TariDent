@@ -1,0 +1,220 @@
+
+
+footer.page-footer
+    .container
+        .page-footer__top-section
+            .page-footer__copy &copy; 1999 - 2018 ООО Тари-Дент
+            .page-footer__up-page
+                button.up-page-button В начало страницы
+    .page-footer__main
+        .container
+            .page-footer__main-container
+                .page-footer__info.page-footer-info
+                    i.page-footer-info__icon.icon-attention-circled
+                    .page-footer-info__content
+                        .page-footer-info__descr Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями ч. 2 ст. 437 Гражданского кодекса Российской Федерации. Для получения подробной информации о стоимости, наименовании и сроках оказания услуг, пожалуйста, обращайтесь по контактным телефонам. Конкретный перечень услуг и порядок их предоставления определяется в договоре оказания услуг, оформляемым между клиникой и пациентом
+                        .page-footer-info__title НЕОБХОДИМА КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА
+                .page-footer__dev-link
+                    .st-link Создание сайта
+
+
+
+
+.page__menu.page-menu.js-page-menu.st--bg--gradient
+    .page-menu__header
+        .page-menu__search
+            form.search
+                input(type='text' placeholder='Поиск по сайту').search__field
+                .search__button
+                    .icon-search
+        .page-menu__close
+            button.btn-close.js-page-menu-close
+
+    ul.main-nav
+        li.main-nav__item.main-nav-item
+            a(href='company.html').main-nav-item__link
+                span.main-nav-item__link-text О компании
+        li.main-nav__item.main-nav-item
+            a(href='#').main-nav-item__link
+                span.main-nav-item__link-text Партнерам и оптовикам
+        li.main-nav__item.main-nav-item
+            a(href='contacts.html').main-nav-item__link
+                span.main-nav-item__link-text Контакты
+        li.main-nav__item.main-nav-item
+            a(href='promo.html').main-nav-item__link
+                span.main-nav-item__link-text Промо
+        li.main-nav__item.main-nav-item
+            a(href='basket.html').main-nav-item__link
+                span.main-nav-item__link-text Корзина
+
+        li.main-nav__item.main-nav-item
+            a(href='index.html').main-nav-item__link
+                span.main-nav-item__link-text Главная
+        li.main-nav__item.main-nav-item
+            .main-nav-item__link-box
+                a(href='#').main-nav-item__link
+                    span.main-nav-item__link-text Продукция Черон
+                button.main-nav-item__toggle.js-dropmenu-toggle 3
+            .main-nav-item__dropmenu
+                .main-nav-item__title-box
+                    button.main-nav-item__toggle.main-nav-item__toggle_prev.js-dropmenu-toggle
+                    a(href='#').main-nav-item__link.tac
+                        span.main-nav-item__link-text Продукция Черон
+                .main-nav__item
+                    a(href='index.html').main-nav-item__link
+                        span.main-nav-item__link-text Кондукторы и шаблоны
+                .main-nav__item
+                    a(href='index.html').main-nav-item__link
+                        span.main-nav-item__link-text Для мебельного производства
+                .main-nav__item
+                    a(href='index.html').main-nav-item__link
+                        span.main-nav-item__link-text Оборудование Черон
+        li.main-nav__item.main-nav-item
+            a(href='#').main-nav-item__link
+                span.main-nav-item__link-text Доставка и оплата
+        li.main-nav__item.main-nav-item
+            a(href='shares.html').main-nav-item__link
+                span.main-nav-item__link-text Акции
+        li.main-nav__item.main-nav-item
+            a(href='reviews.html').main-nav-item__link
+                span.main-nav-item__link-text Отзывы о продукции
+        li.main-nav__item.main-nav-item
+            a(href='videos.html').main-nav-item__link
+                span.main-nav-item__link-text Видео инструкции
+        li.main-nav__item.main-nav-item
+            a(href='shops.html').main-nav-item__link
+                span.main-nav-item__link-text Адреса магазинов
+
+
+
+
+.page__overlay.js-popups-overlay.js-close-popups.js-page-menu-close
+.page__popups.popups.js-popups
+    .popups__popup(data-popup-name='city')
+        .popup
+            .popup__close
+                button.btn-close.btn-close_circle.js-close-popups
+            .popup__header
+                .st-title Укажите регион доставки
+            .popup__content
+                .st-form
+                    .st-form__line
+                        input(type='text' placeholder='Введите название населенного пункта' required).input
+                    .st-form__line
+                        b Популярные города
+                    .st-form__line
+                        ul.nav-list.nav-list_cities
+                            li.nav-list__item
+                                a(href='#').st-link Москва
+                            li.nav-list__item
+                                a(href='#').st-link Санкт-Петербург
+                            li.nav-list__item
+                                a(href='#').st-link Нижний Новгород
+                            li.nav-list__item
+                                a(href='#').st-link Хабаровск
+                            li.nav-list__item
+                                a(href='#').st-link Ростов-на-Дону
+                            li.nav-list__item
+                                a(href='#').st-link Набережные Челны
+            .popup__footer
+                button.st-button Запомнить выбор
+
+
+    .popups__popup(data-popup-name='city2')
+        .popup
+            .popup__close
+                button.btn-close.btn-close_circle.js-close-popups
+            .popup__header.popup__header_border
+                .popup__title
+                    .st-title Выберите город
+                p Не нашли своего города - оформите заказ через интернет магазин
+            .popup__content
+                .st-form
+                    .st-form__line
+                        ul.nav-list.nav-list_cities
+                            li.nav-list__item
+                                b А
+                            li.nav-list__item
+                                a(href='#').st-link Москва
+                            li.nav-list__item
+                                a(href='#').st-link Санкт-Петербург
+                            li.nav-list__item
+                                a(href='#').st-link Нижний Новгород
+                            li.nav-list__item
+                                a(href='#').st-link Хабаровск
+                            li.nav-list__item
+                                b Б
+                            li.nav-list__item
+                                a(href='#').st-link Ростов-на-Дону
+                            li.nav-list__item
+                                a(href='#').st-link Набережные Челны
+                            li.nav-list__item
+                                a(href='#').st-link Москва
+                            li.nav-list__item
+                                a(href='#').st-link Санкт-Петербург
+                            li.nav-list__item
+                                b С
+                            li.nav-list__item
+                                a(href='#').st-link Нижний Новгород
+                            li.nav-list__item
+                                a(href='#').st-link Хабаровск
+                            li.nav-list__item
+                                a(href='#').st-link Ростов-на-Дону
+                            li.nav-list__item
+                                a(href='#').st-link Набережные Челны
+
+
+    .popups__popup(data-popup-name='video')
+        .popup.popup_video
+            .popup__close
+                button.btn-close.btn-close_circle.js-close-popups
+            .proportional-box.proportional-box_video
+                .proportional-box__content
+                    iframe(frameborder="0" allowfullscreen).proportional-box__video.js-popup-video
+
+
+    .popups__popup(data-popup-name='product')
+        .popup.popup_w_580
+            .popup__close
+                button.btn-close.btn-close_circle.js-close-popups
+            .popup__header
+                .st-title Товар добавлен в корзину
+            .popup__content
+                .products-list-item.products-list-item_single
+                    img(src='./images/products/product1.jpg').products-list-item__image
+                    .products-list-item__text Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7мм. Можно ставить шканты
+                .popup-total-price
+                    .popup-total-price__text 1 шт.
+                    .popup-total-price__value 1 430 руб
+
+            .popup__footer
+                span.st-link.st-link_tdn.js-close-popups Продолжить покупки
+                button.st-button Оформить заказ
+
+
+    .popups__popup(data-popup-name='calc')
+        .popup.popup_w_580
+            .popup__close
+                button.btn-close.btn-close_circle.js-close-popups
+            .popup__header.popup__header_border
+                .st-title Заявка на расчет стоимость
+            .popup__content
+                form.st-form
+                    .st-form__line
+                        input(type='text' placeholder='Ваше имя *' required).input
+
+                    .st-form__line
+                        input(type='text' placeholder='Телефон *' required).input
+
+                    .st-form__line
+                        textarea(placeholder='Комментраий' required).textarea.textarea_h_80
+
+                    .st-form__line.st-form__line_bg_gray.st-form__line_p_20
+                        label.st-label
+                            input(type='checkbox').st-label__input
+                            span.st-checkbox.st-label__checkbox
+                                i.st-checkbox__icon.icon-ok
+                            | Я согласен на обработку персональных данных
+
+                    .st-form__line.tac
+                        button.st-button.st-button_large.st-button_shadow_off Расчет стоимости

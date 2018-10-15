@@ -1,0 +1,27 @@
+mixin productItem(galleryNum)
+    article.product-item
+        header.product-item__header
+            h2.product-item__title МК-09
+            .product-item__video-icon(data-target-popup='video' data-video-src='https://www.youtube.com/embed/9qMpqiuQ_Gg?rel=0&showinfo=0').js-open-popup
+                .icon-youtube-play
+        .product-item__image-box
+            a(href='./images/examples/closet.jpg' data-fancybox='gallery'+galleryNum).proportional-box.proportional-box_zoom
+                img(src='./images/examples/closet.jpg').proportional-box__image
+            .product-item__gallery
+                a(href='./images/examples/kitchen.jpg' data-fancybox='gallery'+galleryNum)
+                    img(src='./images/examples/kitchen.jpg')
+                a(href='./images/examples/wall.jpg' data-fancybox='gallery'+galleryNum)
+                    img(src='./images/examples/wall.jpg')
+                a(href='./images/examples/kitchen.jpg' data-fancybox='gallery' + galleryNum)
+                    img(src='./images/examples/kitchen.jpg')
+                a(href='./images/examples/closet.jpg' data-fancybox='gallery' + galleryNum)
+                    img(src='./images/examples/closet.jpg')
+        .product-item__section
+            .product-item__descr Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30
+        .product-item__section
+            .product-item__price-grid
+                .product-item__price-text 1 670 руб.
+                .product-item__price-button
+                    a(href='#' data-target-popup='product' data-tooltip-content='Добавить в корзину').st-button.js-open-popup.st-button_tooltip купить
+        .product-item__section.tac
+            a(href='product-card.html').st-link Подробнее

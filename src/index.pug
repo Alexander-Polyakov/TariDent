@@ -1,0 +1,287 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+include pug/components/productItem
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Главная')
+        include pug/styles.pug
+
+    body
+        .page
+
+                include pug/components/header
+
+                main.page__main
+                        .preview-section
+                            .preview-section__container.container
+                                .preview-section__title-box
+                                    .preview-section__title СТОМАТОЛОГИЯ БЕЗ БОЛИ
+                                .preview-section__content-box
+                                    .preview-section__content
+                                        .preview-description
+                                            .preview-description__title.st-title Удаление зубов ультразвуком <br/> PIEZOTOME SOLO
+                                            .preview-description__subtitle
+                                                .st-title.st-title_fz_1-25em.st-title_bot_line.dib Безболезненно и комфортно
+                                            .preview-description__content
+                                                ul.list
+                                                    li.list__item.list-item
+                                                        .list-item__icon
+                                                            i.circle-plus-icon
+                                                        .list-item__text Уникальное оборудование для безболезненого удаления зубов
+                                                    li.list__item.list-item
+                                                        .list-item__icon
+                                                            i.circle-plus-icon
+                                                        .list-item__text Пациент субъективно вообще ничего не ощущает кроме звука работы аппарата.
+
+                                img.preview-section__image(src='../images/preview1.jpg' alt='preview')
+
+
+                        .page-section
+                            .container
+                                .page-section__section
+                                    h1.st-title.tac Удаление зубов ультразвуком PIEZOTOME SOLO в Воронеже
+                                .page-section__section
+                                    .description-box
+                                        .description-box__header
+                                            .footnote-box.footnote-box_large
+                                                .footnote-box__footnote
+                                                    .footnote-box__footnote-bg
+                                                    i.footnote-box__icon.icon-attention-circled
+                                                .footnote-box__main
+                                                    .footnote-box__title К сожалению, бывают случаи, когда зуб уже не спасти. <br/> Нервное напряжение и страх перед удалением зуба – естественная реакция организма, это инстинкт самосохранения.
+                                        .description-box__main
+                                            .st-text
+                                                p Если и вас постигла та же участь, не волнуйтесь. Современные технологии помогут быстро и безболезненно  удалить и быстро заменить утраченный зуб – с помощью моста, коронки, протеза или импланта.
+                                                p До вчерашнего дня клиника «ТАРИ-ДЕНТ» предоставляла хирургическую стоматологическую помощь на уровне современных достижений науки в стоматологии.
+                                                p Но сегодня, хирурги получили возможность шагнуть еще  на ступень выше.
+
+
+
+                        .page-section
+                            .container
+                                .page-section__section
+                                    h2.st-title.tac Аппарат для пьезохирургии PIEZOTOME SOLO (Компания SATELEC, Франция)
+
+                                .page-section__section
+                                    .detailed-descr
+                                        .detailed-descr__section
+                                            .detailed-descr__section-bg
+                                            .detailed-descr__section-content
+                                                .detailed-descr__text
+                                                    .st-text
+                                                        p
+                                                            b Что же даёт новый аппарат и как он работает?
+                                                        p Пьезохирургический аппарат это, по сути, аппарат УЗИ, позволяющий модулировать и концентрировать контролируемые ультразвуковые вибрации различного диапазона в насадке-резце. Опуская сложные физико-математические формулы, поясним, что аппарат обладает:
+
+                                                ul.counter-list
+                                                    li.counter-list__item Избирательной режущей способностью – разрезается только костная ткань и исключается риск повреждения близлежащих нервов, сосудов и мягких тканей;
+                                                    li.counter-list__item Две помпы подают физраствор точно на кончик рабочего инструмента, обеспечивая бесперебойное охлаждение и эвакуацию опилок с операционного поля, что позволяет визуализировать операционную рану;
+                                                    li.counter-list__item Особо прочные  и тонкие насадки рабочего наконечника позволяют сделать тончайший  (около 0,1 мм) гладкий разрез – распил костной ткани, максимально сохраняя её объем;
+                                                    li.counter-list__item Физический феномен кавитации обладает гемостатическим эффектом, предотвращает перегрев тканей, улучшая обзор и минимизируя риск развития внутриоперационного костного кровотечения;
+                                                    li.counter-list__item Высокая мощность и бесшумность создаёт удобство и легкость проведения разрезов для врача и пациента, обеспечивая скорость проведения операции и уменьшая риск послеоперационных воспалительных осложнений;
+
+                                        .detailed-descr__section
+                                            .detailed-descr__slider-box
+                                                .st-text
+                                                    p
+                                                        b Это предмет желаний любого хорошего хирурга высокой квалификации.
+                                                    p Использовать пьезоаппарат можно при любых хирургических манипуляциях на костной ткани: от удаления зубов до сложных костных реконструкций на альвеолярном отростке челюстей с целью имплантации.
+                                                    p Таким образом, аппарат значительно минимизирует  травматичность проводимых операций, что улучшает результаты работы и сокращает сроки заживления послеоперационных ран. Особенно это касается операций, связанных с имплантатами. Созидательные операции должны приносить врачу и пациенту только радость и удовольствие!
+                                                .detailed-descr__slider
+                                                    .small-slider.owl-carousel.js-small-slider
+                                                        .small-slider__item
+                                                            img(src='../images/slide1.png').small-slider__image
+                                                        .small-slider__item
+                                                            img(src='../images/slide1.png').small-slider__image
+                                                        .small-slider__item
+                                                            img(src='../images/slide1.png').small-slider__image
+
+
+                        .parallax-section(style='background-image: url("./images/parallax-img1.jpg")')
+                            .parallax-section__inner
+                                i.parallax-section__icon.icon-attention-circled
+                                .parallax-section__content В клинике ТАРИ-ДЕНТ удаление зуба происходит быстро и безболезненно. <br/> Но прежде чем вырывать зуб, врач-стоматолог обязательно попытается его спасти.
+
+                        .page-section
+                            .container
+                                .page-section__section
+                                    .st-title.tac Ведет прием
+                                .page-section__section
+                                    .visit-grid
+                                        .visit-grid__item.visit-grid__item_info
+                                            .doctor-short-card
+                                                .doctor-short-card__main
+                                                    img(src='../images/personnel1.png').doctor-short-card__photo
+                                                    .doctor-short-card__content
+                                                        .doctor-short-card__subtitle Кандидат медицинских наук
+                                                        .doctor-short-card__title Марахова <br/> Маргарита Викторовна
+                                                        .doctor-short-card__descr Начало врачебной практики в 1995 г. Занимается удалением зубов любой сложности и постановкой имплантатов.
+                                                        .doctor-short-card__link
+                                                            a(href='#').st-link.st-link_blue Подробнее о враче
+                                                .doctor-short-card__footer
+                                                    .footnote-box
+                                                        .footnote-box__footnote
+                                                            .footnote-box__footnote-bg
+                                                            i.footnote-box__icon.icon-attention-circled
+                                                        .footnote-box__button-right
+                                                            button.st-button ЗАДАТЬ ВОПРОС
+                                        .visit-grid__item.visit-grid__item_form
+                                            form.st-form
+                                                .st-form__main
+                                                    .st-form__line
+                                                        .st-title Записаться на прием
+                                                    .st-form__line
+                                                        input(type="text" placeholder='Ваше имя').input
+                                                    .st-form__line
+                                                        input(type="text" placeholder='Номер телефона').input
+                                                    .st-form__line.st-form__line_consent
+                                                        .checkbox-label
+                                                            input(id='check1' type='checkbox').checkbox-label__checkbox
+                                                            label(for='check1').checkbox-label__label
+                                                                | Я даю согласие на обработку
+                                                                |
+                                                                a(href='#') персональных данных
+                                                .st-form__footer
+                                                    button.st-button ЗАПИСАТСЯ НА ПРИЕМ
+
+                                .page-section__section
+                                    .accordion-list
+                                        .accordion-list__item
+                                            .description-box.description-box_accordion
+                                                .description-box__header
+                                                    .footnote-box.footnote-box_accordion
+                                                        .footnote-box__footnote
+                                                            .footnote-box__footnote-bg
+                                                            i.footnote-box__icon.icon-attention-circled
+                                                        .footnote-box__title Удаление зуба мудрости ультразвуком – мировая признанная методика
+                                                        .footnote-box__arrow
+                                                .description-box__main
+                                                    .st-text
+                                                        p Проблемы, связанные с зубом мудрости, встречаются практически у каждого человека. Сложности с прорезыванием, неправильное положение в челюсти, боли и дискомфорт. Генетические изменения, связанные с потреблением обработанной пищи, изменяют кости челюсти человека – они становятся меньше, зубам мудрости не поместиться в их обычном положении.
+                                                    .description-box__more-link
+                                                        .st-link.st-link_blue.ttu ПОДРОБНЕЕ
+                                        .accordion-list__item
+                                            .description-box.description-box_accordion.opened
+                                                .description-box__header
+                                                    .footnote-box.footnote-box_accordion
+                                                        .footnote-box__footnote
+                                                            .footnote-box__footnote-bg
+                                                            i.footnote-box__icon.icon-attention-circled
+                                                        .footnote-box__title Удаление зуба мудрости ультразвуком – мировая признанная методика
+                                                        .footnote-box__arrow
+                                                .description-box__main
+                                                    .st-text
+                                                        p Проблемы, связанные с зубом мудрости, встречаются практически у каждого человека. Сложности с прорезыванием, неправильное положение в челюсти, боли и дискомфорт. Генетические изменения, связанные с потреблением обработанной пищи, изменяют кости челюсти человека – они становятся меньше, зубам мудрости не поместиться в их обычном положении.
+                                                    .description-box__more-link
+                                                        .st-link.st-link_blue.ttu ПОДРОБНЕЕ
+
+
+                        .page-section
+                            .container.container_w_900
+                                .page-section__section
+                                    h2.st-title.tac Стоимость удаления зуба
+                                .page-section__section
+                                    .st-box
+                                        .st-box__section
+                                            .st-text
+                                                p Цена на удаление зуба мудрости ультразвуком складывается из многих аспектов:
+                                                p Вы можете быть уверены: доверяя удаление зуба мудрости нашим врачам вы получите лучший результат и отсутствие осложнений!
+                                        .st-box__section
+                                            .table-box
+                                                .table-box__header
+                                                    .table-box__title-box
+                                                        .footnote-box
+                                                            .footnote-box__footnote
+                                                                .footnote-box__footnote-bg
+                                                                i.footnote-box__icon.icon-attention-circled
+                                                            .footnote-box__main
+                                                                .footnote-box__title.ttu ЦЕНЫ
+                                                .table-box__main
+                                                    .st-table
+                                                        .st-table__line
+                                                            .st-table__name Удаление зуба
+                                                            .st-table__value 10 000
+                                                        .st-table__line
+                                                            .st-table__name Удаление зуба мудрости ультразвуком по методу PIEZOSURGERY
+                                                            .st-table__value 15 000
+                                                        .st-table__line
+                                                            .st-table__name Удаление ретинированного зуба мудрости ультразвуком по методу PIEZOSURGERY
+                                                            .st-table__value 25 000
+                                                        .st-table__line
+                                                            .st-table__name Удаление зачатка зуба мудрости ультразвуком по методу PIEZOSURGERY
+                                                            .st-table__value 35 000
+
+                        .map-section
+                            .map-section__map#map
+
+                            .map-section__container.container
+                                .map-section__contacts
+                                    .contacts-map
+                                        .contacts-map__content
+                                            .contacts-map__header
+                                                .contacts-map__logo
+                                                .contacts-map__title Стоматология Тари-Дент
+                                            .contacts-map__main
+                                                .contacts-list
+                                                    .contacts-list__item
+                                                        .contact-item
+                                                            .contact-item__header
+                                                                i.contact-item__icon.icon-location
+                                                                .contact-item__title Адрес:
+                                                            .contact-item__main г. Воронеж, ул. Володарского, 40
+                                                    .contacts-list__item
+                                                        .contact-item
+                                                            .contact-item__header
+                                                                i.contact-item__icon.icon-phone
+                                                                .contact-item__title Телефон:
+                                                            .contact-item__main +7 (473) 205-92-56
+                                                    .contacts-list__item
+                                                        .contact-item
+                                                            .contact-item__header
+                                                                i.contact-item__icon.icon-location
+                                                                .contact-item__title Время работы:
+                                                            .contact-item__main
+                                                                p пн - пт: 9:00-20:00
+                                                                p сб: 10:00-18:00
+                                                                p вс: Выходной
+                                                    .contacts-list__item
+                                                        .contact-item
+                                                            .contact-item__header
+                                                                i.contact-item__icon.icon-mail
+                                                                .contact-item__title E-mail
+                                                            .contact-item__main
+                                                                a(href='mailto:info@tari-dent.com').st-link info@tari-dent.com
+
+                                        .contacts-map__footer
+                                            .soc-list
+                                                a(href='#').soc-list__item
+                                                    i.soc-list__icon.icon-odnoklassniki
+
+                                                a(href='#').soc-list__item
+                                                    i.soc-list__icon.icon-vkontakte
+
+                                                a(href='#').soc-list__item
+                                                    i.soc-list__icon.icon-instagram
+
+
+                                .map-section__main-box
+                                    .map-section__header
+
+                                    .map-section__footer
+
+
+
+
+
+
+
+
+                include pug/components/footer
+
+
+        include pug/scripts.pug
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+
