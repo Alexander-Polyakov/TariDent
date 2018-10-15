@@ -38,6 +38,11 @@ $(document).ready(function() {
     // });
 
 
+    $(".js-impaired-toggle").click(function () {
+        $('.page-header').toggleClass('impaired-opened');
+        $(".page-header__impaired-section").slideToggle(400);
+    });
+
     $(".description-box_accordion .description-box__header").click(function () {
         var thisBl = $(this).closest('.description-box_accordion'),
             thisContent = thisBl.find('.description-box__main');

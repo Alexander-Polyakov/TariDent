@@ -90,131 +90,31 @@ footer.page-footer
 
 .page__overlay.js-popups-overlay.js-close-popups.js-page-menu-close
 .page__popups.popups.js-popups
-    .popups__popup(data-popup-name='city')
-        .popup
-            .popup__close
-                button.btn-close.btn-close_circle.js-close-popups
-            .popup__header
-                .st-title Укажите регион доставки
-            .popup__content
-                .st-form
-                    .st-form__line
-                        input(type='text' placeholder='Введите название населенного пункта' required).input
-                    .st-form__line
-                        b Популярные города
-                    .st-form__line
-                        ul.nav-list.nav-list_cities
-                            li.nav-list__item
-                                a(href='#').st-link Москва
-                            li.nav-list__item
-                                a(href='#').st-link Санкт-Петербург
-                            li.nav-list__item
-                                a(href='#').st-link Нижний Новгород
-                            li.nav-list__item
-                                a(href='#').st-link Хабаровск
-                            li.nav-list__item
-                                a(href='#').st-link Ростов-на-Дону
-                            li.nav-list__item
-                                a(href='#').st-link Набережные Челны
-            .popup__footer
-                button.st-button Запомнить выбор
-
-
-    .popups__popup(data-popup-name='city2')
-        .popup
-            .popup__close
-                button.btn-close.btn-close_circle.js-close-popups
-            .popup__header.popup__header_border
-                .popup__title
-                    .st-title Выберите город
-                p Не нашли своего города - оформите заказ через интернет магазин
-            .popup__content
-                .st-form
-                    .st-form__line
-                        ul.nav-list.nav-list_cities
-                            li.nav-list__item
-                                b А
-                            li.nav-list__item
-                                a(href='#').st-link Москва
-                            li.nav-list__item
-                                a(href='#').st-link Санкт-Петербург
-                            li.nav-list__item
-                                a(href='#').st-link Нижний Новгород
-                            li.nav-list__item
-                                a(href='#').st-link Хабаровск
-                            li.nav-list__item
-                                b Б
-                            li.nav-list__item
-                                a(href='#').st-link Ростов-на-Дону
-                            li.nav-list__item
-                                a(href='#').st-link Набережные Челны
-                            li.nav-list__item
-                                a(href='#').st-link Москва
-                            li.nav-list__item
-                                a(href='#').st-link Санкт-Петербург
-                            li.nav-list__item
-                                b С
-                            li.nav-list__item
-                                a(href='#').st-link Нижний Новгород
-                            li.nav-list__item
-                                a(href='#').st-link Хабаровск
-                            li.nav-list__item
-                                a(href='#').st-link Ростов-на-Дону
-                            li.nav-list__item
-                                a(href='#').st-link Набережные Челны
-
-
-    .popups__popup(data-popup-name='video')
-        .popup.popup_video
-            .popup__close
-                button.btn-close.btn-close_circle.js-close-popups
-            .proportional-box.proportional-box_video
-                .proportional-box__content
-                    iframe(frameborder="0" allowfullscreen).proportional-box__video.js-popup-video
-
-
-    .popups__popup(data-popup-name='product')
-        .popup.popup_w_580
-            .popup__close
-                button.btn-close.btn-close_circle.js-close-popups
-            .popup__header
-                .st-title Товар добавлен в корзину
-            .popup__content
-                .products-list-item.products-list-item_single
-                    img(src='./images/products/product1.jpg').products-list-item__image
-                    .products-list-item__text Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7мм. Можно ставить шканты
-                .popup-total-price
-                    .popup-total-price__text 1 шт.
-                    .popup-total-price__value 1 430 руб
-
-            .popup__footer
-                span.st-link.st-link_tdn.js-close-popups Продолжить покупки
-                button.st-button Оформить заказ
-
-
-    .popups__popup(data-popup-name='calc')
-        .popup.popup_w_580
-            .popup__close
-                button.btn-close.btn-close_circle.js-close-popups
-            .popup__header.popup__header_border
-                .st-title Заявка на расчет стоимость
-            .popup__content
+    .popups__popup(data-popup-name='appointment')
+        .form-popup
+            .form-popup__close
+                button.btn-close.js-close-popups
+            .form-popup__form
                 form.st-form
                     .st-form__line
-                        input(type='text' placeholder='Ваше имя *' required).input
-
+                        .st-title.tac Оставьте заявку
                     .st-form__line
-                        input(type='text' placeholder='Телефон *' required).input
-
+                        input(type="text" placeholder='Ваше имя').input
                     .st-form__line
-                        textarea(placeholder='Комментраий' required).textarea.textarea_h_80
-
-                    .st-form__line.st-form__line_bg_gray.st-form__line_p_20
-                        label.st-label
-                            input(type='checkbox').st-label__input
-                            span.st-checkbox.st-label__checkbox
-                                i.st-checkbox__icon.icon-ok
-                            | Я согласен на обработку персональных данных
-
+                        input(type="text" placeholder='Номер телефона').input
+                    .st-form__line
+                        .st-form__info
+                            | Нажимая кнопку, вы принимаете условия
+                            |
+                            a(href='#').st-link «Пользовательского соглашения»
+                            |
+                            | и даете
+                            |
+                            a(href='#').st-link «Согласие на обработку персональных данных»
                     .st-form__line.tac
-                        button.st-button.st-button_large.st-button_shadow_off Расчет стоимости
+                        button.st-button ЗАЯВКА
+
+
+
+
+

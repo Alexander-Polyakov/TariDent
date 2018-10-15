@@ -13,6 +13,41 @@
   <body>
     <div class="page">
       <header class="page-header">
+        <div class="page-header__impaired-section">
+          <div class="page-header__impaired-container container">
+            <div class="impaired-options-grid">
+              <div class="impaired-options-grid__item">
+                <div class="impaired-options-item">
+                  <div class="impaired-options-item__name">Размер шрифта:</div>
+                  <div class="impaired-options-item__content">
+                    <div class="page-fonts">
+                      <div class="page-fonts__item page-fonts__item_small active">a</div>
+                      <div class="page-fonts__item">a</div>
+                      <div class="page-fonts__item page-fonts__item_large">a</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="impaired-options-grid__item">
+                <div class="impaired-options-item">
+                  <div class="impaired-options-item__name">Цветовая схема:</div>
+                  <div class="impaired-options-item__content">
+                    <div class="color-scheme">
+                      <div class="color-scheme__item color-scheme__item_white">a</div>
+                      <div class="color-scheme__item color-scheme__item_dark">a</div>
+                      <div class="color-scheme__item color-scheme__item_blue">a</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="impaired-options-grid__item">
+                <div class="impaired-options-item js-impaired-toggle"><i class="impaired-options-item__icon icon-glasses"></i>
+                  <div class="impaired-options-item__content">Обычная версия сайта</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="page-header__top-section">
           <div class="page-header__top-container container">
             <div class="page-header__top-item">
@@ -23,7 +58,7 @@
             </div>
             <div class="page-header__top-item">
               <div class="infographic-box">
-                <div class="infographic-box__circle"><i class="infographic-box__icon icon-clock-1"></i></div>
+                <div class="infographic-box__circle"><i class="infographic-box__icon icon-clock"></i></div>
                 <div class="infographic-box__content">
                   <p>Пн - Пт: 9:00 - 20:00</p>
                   <p>Сб: 10:00 - 18:00</p>
@@ -31,7 +66,7 @@
               </div>
             </div>
             <div class="page-header__top-item page-header__top-item_impaired">
-              <div class="infographic-box">
+              <div class="infographic-box js-impaired-toggle">
                 <div class="infographic-box__circle"><i class="infographic-box__icon icon-glasses"></i></div>
                 <div class="infographic-box__content">Версия для слабовидящих</div>
               </div>
@@ -55,7 +90,7 @@
                 </div>
               </div>
               <div class="header-main-box__logo"><a class="logo" href="index.html"><img class="logo__img" src="./images//logo.svg" alt="Тари-Дент"></a></div>
-              <div class="header-main-box__nav">
+              <nav class="header-main-box__nav">
                 <ul class="main-nav">
                   <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="index.html">
                       <div class="main-nav-item__link-icon">
@@ -70,9 +105,9 @@
                   <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="shares.html"><span class="main-nav-item__link-text">ЦЕНЫ</span></a></li>
                   <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="reviews.html"><span class="main-nav-item__link-text">КОНТАКТЫ</span></a></li>
                 </ul>
-              </div>
+              </nav>
               <div class="header-main-box__button">
-                <button class="st-button">Записаться на прием</button>
+                <button class="st-button js-open-popup" data-target-popup="appointment">Записаться на прием</button>
               </div>
             </div>
           </div>
@@ -86,6 +121,11 @@
         </div>
       </header>
       <main class="page__main">
+        <div class="breadcrumbs-section">
+          <div class="container">
+            <nav class="breadcrumbs"><a class="breadcrumbs__item" href="#">Главная</a><span class="breadcrumbs__item">Удаление зубов ультразвуком</span></nav>
+          </div>
+        </div>
         <div class="preview-section">
           <div class="preview-section__container container">
             <div class="preview-section__title-box">
@@ -210,20 +250,18 @@
                         <div class="doctor-short-card__link"><a class="st-link st-link_blue" href="#">Подробнее о враче</a></div>
                       </div>
                     </div>
-                    <div class="doctor-short-card__footer">
-                      <div class="footnote-box">
-                        <div class="footnote-box__footnote">
-                          <div class="footnote-box__footnote-bg"></div><i class="footnote-box__icon icon-attention-circled"></i>
-                        </div>
-                        <div class="footnote-box__button-right">
-                          <button class="st-button">ЗАДАТЬ ВОПРОС</button>
-                        </div>
+                    <div class="doctor-short-card__footer footnote-box">
+                      <div class="footnote-box__footnote">
+                        <div class="footnote-box__footnote-bg"></div><i class="footnote-box__icon icon-help-circled"></i>
+                      </div>
+                      <div class="footnote-box__button-right">
+                        <button class="st-button">ЗАДАТЬ ВОПРОС</button>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="visit-grid__item visit-grid__item_form">
-                  <form class="st-form">
+                  <form class="st-form st-form_abs_footer">
                     <div class="st-form__main">
                       <div class="st-form__line">
                         <div class="st-title">Записаться на прием</div>
@@ -258,7 +296,7 @@
                     <div class="description-box__header">
                       <div class="footnote-box footnote-box_accordion">
                         <div class="footnote-box__footnote">
-                          <div class="footnote-box__footnote-bg"></div><i class="footnote-box__icon icon-attention-circled"></i>
+                          <div class="footnote-box__footnote-bg"></div><i class="footnote-box__icon icon-info-circled-1"></i>
                         </div>
                         <div class="footnote-box__title">Удаление зуба мудрости ультразвуком – мировая признанная методика</div>
                         <div class="footnote-box__arrow"></div>
@@ -318,7 +356,7 @@
                       <div class="table-box__title-box">
                         <div class="footnote-box">
                           <div class="footnote-box__footnote">
-                            <div class="footnote-box__footnote-bg"></div><i class="footnote-box__icon icon-attention-circled"></i>
+                            <div class="footnote-box__footnote-bg"></div><i class="footnote-box__icon icon-rouble"></i>
                           </div>
                           <div class="footnote-box__main">
                             <div class="footnote-box__title ttu">ЦЕНЫ</div>
@@ -382,7 +420,7 @@
                       </div>
                       <div class="contacts-list__item">
                         <div class="contact-item">
-                          <div class="contact-item__header"><i class="contact-item__icon icon-location"></i>
+                          <div class="contact-item__header"><i class="contact-item__icon icon-clock"></i>
                             <div class="contact-item__title">Время работы:</div>
                           </div>
                           <div class="contact-item__main">
@@ -394,7 +432,7 @@
                       </div>
                       <div class="contacts-list__item">
                         <div class="contact-item">
-                          <div class="contact-item__header"><i class="contact-item__icon icon-mail"></i>
+                          <div class="contact-item__header"><i class="contact-item__icon icon-mail-alt"></i>
                             <div class="contact-item__title">E-mail</div>
                           </div>
                           <div class="contact-item__main"><a class="st-link" href="mailto:info@tari-dent.com">info@tari-dent.com</a></div>
@@ -483,133 +521,32 @@
       </div>
       <div class="page__overlay js-popups-overlay js-close-popups js-page-menu-close"></div>
       <div class="page__popups popups js-popups">
-        <div class="popups__popup" data-popup-name="city">
-          <div class="popup">
-            <div class="popup__close">
-              <button class="btn-close btn-close_circle js-close-popups"></button>
+        <div class="popups__popup" data-popup-name="appointment">
+          <div class="form-popup">
+            <div class="form-popup__close">
+              <button class="btn-close js-close-popups"></button>
             </div>
-            <div class="popup__header">
-              <div class="st-title">Укажите регион доставки</div>
-            </div>
-            <div class="popup__content">
-              <div class="st-form">
-                <div class="st-form__line">
-                  <input class="input" type="text" placeholder="Введите название населенного пункта" required>
-                </div>
-                <div class="st-form__line"><b>Популярные города</b></div>
-                <div class="st-form__line">
-                  <ul class="nav-list nav-list_cities">
-                    <li class="nav-list__item"><a class="st-link" href="#">Москва</a></li>
-                    <li class="nav-list__item"><a class="st-link" href="#">Санкт-Петербург</a></li>
-                    <li class="nav-list__item"><a class="st-link" href="#">Нижний Новгород</a></li>
-                    <li class="nav-list__item"><a class="st-link" href="#">Хабаровск</a></li>
-                    <li class="nav-list__item"><a class="st-link" href="#">Ростов-на-Дону</a></li>
-                    <li class="nav-list__item"><a class="st-link" href="#">Набережные Челны</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="popup__footer">
-              <button class="st-button">Запомнить выбор</button>
-            </div>
-          </div>
-        </div>
-        <div class="popups__popup" data-popup-name="city2">
-          <div class="popup">
-            <div class="popup__close">
-              <button class="btn-close btn-close_circle js-close-popups"></button>
-            </div>
-            <div class="popup__header popup__header_border">
-              <div class="popup__title">
-                <div class="st-title">Выберите город</div>
-              </div>
-              <p>Не нашли своего города - оформите заказ через интернет магазин</p>
-            </div>
-            <div class="popup__content">
-              <div class="st-form">
-                <div class="st-form__line">
-                  <ul class="nav-list nav-list_cities">
-                    <li class="nav-list__item"><b>А</b></li>
-                    <li class="nav-list__item"><a class="st-link" href="#">Москва</a></li>
-                    <li class="nav-list__item"><a class="st-link" href="#">Санкт-Петербург</a></li>
-                    <li class="nav-list__item"><a class="st-link" href="#">Нижний Новгород</a></li>
-                    <li class="nav-list__item"><a class="st-link" href="#">Хабаровск</a></li>
-                    <li class="nav-list__item"><b>Б</b></li>
-                    <li class="nav-list__item"><a class="st-link" href="#">Ростов-на-Дону</a></li>
-                    <li class="nav-list__item"><a class="st-link" href="#">Набережные Челны</a></li>
-                    <li class="nav-list__item"><a class="st-link" href="#">Москва</a></li>
-                    <li class="nav-list__item"><a class="st-link" href="#">Санкт-Петербург</a></li>
-                    <li class="nav-list__item"><b>С</b></li>
-                    <li class="nav-list__item"><a class="st-link" href="#">Нижний Новгород</a></li>
-                    <li class="nav-list__item"><a class="st-link" href="#">Хабаровск</a></li>
-                    <li class="nav-list__item"><a class="st-link" href="#">Ростов-на-Дону</a></li>
-                    <li class="nav-list__item"><a class="st-link" href="#">Набережные Челны</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="popups__popup" data-popup-name="video">
-          <div class="popup popup_video">
-            <div class="popup__close">
-              <button class="btn-close btn-close_circle js-close-popups"></button>
-            </div>
-            <div class="proportional-box proportional-box_video">
-              <div class="proportional-box__content">
-                <iframe class="proportional-box__video js-popup-video" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="popups__popup" data-popup-name="product">
-          <div class="popup popup_w_580">
-            <div class="popup__close">
-              <button class="btn-close btn-close_circle js-close-popups"></button>
-            </div>
-            <div class="popup__header">
-              <div class="st-title">Товар добавлен в корзину</div>
-            </div>
-            <div class="popup__content">
-              <div class="products-list-item products-list-item_single"><img class="products-list-item__image" src="./images/products/product1.jpg">
-                <div class="products-list-item__text">Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7мм. Можно ставить шканты</div>
-              </div>
-              <div class="popup-total-price">
-                <div class="popup-total-price__text">1 шт.</div>
-                <div class="popup-total-price__value">1 430 руб</div>
-              </div>
-            </div>
-            <div class="popup__footer"><span class="st-link st-link_tdn js-close-popups">Продолжить покупки</span>
-              <button class="st-button">Оформить заказ</button>
-            </div>
-          </div>
-        </div>
-        <div class="popups__popup" data-popup-name="calc">
-          <div class="popup popup_w_580">
-            <div class="popup__close">
-              <button class="btn-close btn-close_circle js-close-popups"></button>
-            </div>
-            <div class="popup__header popup__header_border">
-              <div class="st-title">Заявка на расчет стоимость</div>
-            </div>
-            <div class="popup__content">
+            <div class="form-popup__form">
               <form class="st-form">
                 <div class="st-form__line">
-                  <input class="input" type="text" placeholder="Ваше имя *" required>
+                  <div class="st-title tac">Оставьте заявку</div>
                 </div>
                 <div class="st-form__line">
-                  <input class="input" type="text" placeholder="Телефон *" required>
+                  <input class="input" type="text" placeholder="Ваше имя">
                 </div>
                 <div class="st-form__line">
-                  <textarea class="textarea textarea_h_80" placeholder="Комментраий" required></textarea>
+                  <input class="input" type="text" placeholder="Номер телефона">
                 </div>
-                <div class="st-form__line st-form__line_bg_gray st-form__line_p_20">
-                  <label class="st-label">
-                    <input class="st-label__input" type="checkbox"><span class="st-checkbox st-label__checkbox"><i class="st-checkbox__icon icon-ok"></i></span>Я согласен на обработку персональных данных
-                  </label>
+                <div class="st-form__line">
+                  <div class="st-form__info">
+                    Нажимая кнопку, вы принимаете условия
+                    <a class="st-link" href="#">«Пользовательского соглашения»</a>
+                    и даете
+                    <a class="st-link" href="#">«Согласие на обработку персональных данных»</a>
+                  </div>
                 </div>
                 <div class="st-form__line tac">
-                  <button class="st-button st-button_large st-button_shadow_off">Расчет стоимости</button>
+                  <button class="st-button">ЗАЯВКА</button>
                 </div>
               </form>
             </div>

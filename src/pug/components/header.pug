@@ -2,6 +2,32 @@
 
 
 header.page-header
+    .page-header__impaired-section
+        .page-header__impaired-container.container
+            .impaired-options-grid
+                .impaired-options-grid__item
+                    .impaired-options-item
+                        .impaired-options-item__name Размер шрифта:
+                        .impaired-options-item__content
+                            .page-fonts
+                                .page-fonts__item.page-fonts__item_small.active a
+                                .page-fonts__item a
+                                .page-fonts__item.page-fonts__item_large a
+
+                .impaired-options-grid__item
+                    .impaired-options-item
+                        .impaired-options-item__name Цветовая схема:
+                        .impaired-options-item__content
+                            .color-scheme
+                                .color-scheme__item.color-scheme__item_white a
+                                .color-scheme__item.color-scheme__item_dark a
+                                .color-scheme__item.color-scheme__item_blue a
+
+                .impaired-options-grid__item
+                    .impaired-options-item.js-impaired-toggle
+                        i.impaired-options-item__icon.icon-glasses
+                        .impaired-options-item__content Обычная версия сайта
+
     .page-header__top-section
         .page-header__top-container.container
             .page-header__top-item
@@ -13,13 +39,13 @@ header.page-header
             .page-header__top-item
                 .infographic-box
                     .infographic-box__circle
-                        i.infographic-box__icon.icon-clock-1
+                        i.infographic-box__icon.icon-clock
                     .infographic-box__content
                         p Пн - Пт: 9:00 - 20:00
                         p Сб: 10:00 - 18:00
 
             .page-header__top-item.page-header__top-item_impaired
-                .infographic-box
+                .infographic-box.js-impaired-toggle
                     .infographic-box__circle
                         i.infographic-box__icon.icon-glasses
                     .infographic-box__content Версия для слабовидящих
@@ -42,7 +68,7 @@ header.page-header
                     a(href='index.html').logo
                         img(src='./images//logo.svg' alt='Тари-Дент').logo__img
 
-                .header-main-box__nav
+                nav.header-main-box__nav
                     ul.main-nav
                         li.main-nav__item.main-nav-item
                             a(href='index.html').main-nav-item__link
@@ -66,7 +92,7 @@ header.page-header
                                 span.main-nav-item__link-text КОНТАКТЫ
 
                 .header-main-box__button
-                    button.st-button Записаться на прием
+                    button(data-target-popup='appointment').st-button.js-open-popup Записаться на прием
 
 
 

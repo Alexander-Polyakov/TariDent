@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'fontello';
-  src: url('../fonts/fontello.eot?13770771');
-  src: url('../fonts/fontello.eot?13770771#iefix') format('embedded-opentype'),
-       url('../fonts/fontello.woff2?13770771') format('woff2'),
-       url('../fonts/fontello.woff?13770771') format('woff'),
-       url('../fonts/fontello.ttf?13770771') format('truetype'),
-       url('../fonts/fontello.svg?13770771#fontello') format('svg');
+  src: url('../fonts/fontello.eot?50337291');
+  src: url('../fonts/fontello.eot?50337291#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff2?50337291') format('woff2'),
+       url('../fonts/fontello.woff?50337291') format('woff'),
+       url('../fonts/fontello.ttf?50337291') format('truetype'),
+       url('../fonts/fontello.svg?50337291#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?13770771#fontello') format('svg');
+    src: url('../font/fontello.svg?50337291#fontello') format('svg');
   }
 }
 */
@@ -55,19 +55,23 @@
  
 .icon-clock:before { content: '\e800'; } /* '' */
 .icon-mail:before { content: '\e801'; } /* '' */
-.icon-group:before { content: '\e802'; } /* '' */
 .icon-clock-1:before { content: '\e803'; } /* '' */
 .icon-location:before { content: '\e804'; } /* '' */
 .icon-basket:before { content: '\e805'; } /* '' */
 .icon-doc:before { content: '\e806'; } /* '' */
+.icon-help:before { content: '\e807'; } /* '' */
 .icon-ok:before { content: '\e808'; } /* '' */
 .icon-attention-circled:before { content: '\e809'; } /* '' */
+.icon-help-circled:before { content: '\e80a'; } /* '' */
+.icon-info-circled-1:before { content: '\e80b'; } /* '' */
 .icon-glasses:before { content: '\e80c'; } /* '' */
 .icon-phone:before { content: '\e810'; } /* '' */
 .icon-share:before { content: '\e812'; } /* '' */
 .icon-search:before { content: '\e816'; } /* '' */
 .icon-location-outline:before { content: '\e817'; } /* '' */
 .icon-info-circled:before { content: '\f085'; } /* '' */
+.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-mail-alt:before { content: '\f0e0'; } /* '' */
 .icon-doc-text:before { content: '\f0f6'; } /* '' */
 .icon-rouble:before { content: '\f158'; } /* '' */
 .icon-youtube-play:before { content: '\f16a'; } /* '' */
