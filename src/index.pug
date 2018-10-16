@@ -10,7 +10,7 @@ html
         +title('Главная')
         include pug/styles.pug
 
-    body.page-fz-16
+    body(data-page-fz='16' data-color-scheme='normal')
         .page
 
                 include pug/components/header
@@ -221,62 +221,60 @@ html
                                                             .st-table__value 35 000
 
                         .map-section
-                            .map-section__map#map
+                            .map-section__map-box
+                                .map-section__map#map
 
-                            .map-section__container.container
-                                .map-section__contacts
-                                    .contacts-map
-                                        .contacts-map__content
-                                            .contacts-map__header
-                                                .contacts-map__logo
-                                                .contacts-map__title Стоматология Тари-Дент
-                                            .contacts-map__main
-                                                .contacts-list
-                                                    .contacts-list__item
-                                                        .contact-item
-                                                            .contact-item__header
-                                                                i.contact-item__icon.icon-location
-                                                                .contact-item__title Адрес:
-                                                            .contact-item__main г. Воронеж, ул. Володарского, 40
-                                                    .contacts-list__item
-                                                        .contact-item
-                                                            .contact-item__header
-                                                                i.contact-item__icon.icon-phone
-                                                                .contact-item__title Телефон:
-                                                            .contact-item__main +7 (473) 205-92-56
-                                                    .contacts-list__item
-                                                        .contact-item
-                                                            .contact-item__header
-                                                                i.contact-item__icon.icon-clock
-                                                                .contact-item__title Время работы:
-                                                            .contact-item__main
-                                                                p пн - пт: 9:00-20:00
-                                                                p сб: 10:00-18:00
-                                                                p вс: Выходной
-                                                    .contacts-list__item
-                                                        .contact-item
-                                                            .contact-item__header
-                                                                i.contact-item__icon.icon-mail-alt
-                                                                .contact-item__title E-mail
-                                                            .contact-item__main
-                                                                a(href='mailto:info@tari-dent.com').st-link info@tari-dent.com
+                                .map-section__container.container
+                                    .map-section__contacts
+                                        .contacts-map
+                                            .contacts-map__content
+                                                .contacts-map__header
+                                                    img(src='./images//logo.svg' alt='Тари-Дент').contacts-map__logo
+                                                .contacts-map__main
+                                                    .contacts-list
+                                                        .contacts-list__item
+                                                            .contact-item
+                                                                .contact-item__header
+                                                                    i.contact-item__icon.icon-location
+                                                                    .contact-item__title Адрес:
+                                                                .contact-item__main г. Воронеж, ул. Володарского, 40
+                                                        .contacts-list__item
+                                                            .contact-item
+                                                                .contact-item__header
+                                                                    i.contact-item__icon.icon-phone
+                                                                    .contact-item__title Телефон:
+                                                                .contact-item__main +7 (473) 205-92-56
+                                                        .contacts-list__item
+                                                            .contact-item
+                                                                .contact-item__header
+                                                                    i.contact-item__icon.icon-clock
+                                                                    .contact-item__title Время работы:
+                                                                .contact-item__main
+                                                                    p пн - пт: 9:00-20:00
+                                                                    p сб: 10:00-18:00
+                                                                    p вс: Выходной
+                                                        .contacts-list__item
+                                                            .contact-item
+                                                                .contact-item__header
+                                                                    i.contact-item__icon.icon-mail-alt
+                                                                    .contact-item__title E-mail
+                                                                .contact-item__main
+                                                                    a(href='mailto:info@tari-dent.com').st-link info@tari-dent.com
+                            .map-section__nav-box
+                                .container
+                                    ul.footer-nav
+                                        li.footer-nav__item
+                                            .st-link.st-link_blue Лицензии
+                                        li.footer-nav__item
+                                            .st-link.st-link_blue Реквизиты
+                                        li.footer-nav__item
+                                            .st-link.st-link_blue Гарантия
+                                        li.footer-nav__item
+                                            .st-link.st-link_blue Политика обработки персональных данных
+                                        li.footer-nav__item
+                                            .st-link.st-link_blue Налоговый вычет
 
-                                        .contacts-map__footer
-                                            .soc-list
-                                                a(href='#').soc-list__item
-                                                    i.soc-list__icon.icon-odnoklassniki
 
-                                                a(href='#').soc-list__item
-                                                    i.soc-list__icon.icon-vkontakte
-
-                                                a(href='#').soc-list__item
-                                                    i.soc-list__icon.icon-instagram
-
-
-                                .map-section__main-box
-                                    .map-section__header
-
-                                    .map-section__footer
 
 
 

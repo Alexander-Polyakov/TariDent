@@ -10,14 +10,15 @@ $(document).ready(function() {
 
         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
 
-        }, {
-
         });
 
 
         myMap.geoObjects.add(myPlacemark);
     });
 
+    $(".js-mobile-contacts-toggle").click(function () {
+        $(".page-header__contacts-section").stop().slideToggle(400);
+    });
 
     // $(".js-accordion").each(function () {
     //     var _this = $(this),
@@ -54,7 +55,6 @@ $(document).ready(function() {
         $(this).addClass("active");
 
         $('body').attr("class", "page-fz-"+fz+" color-scheme-"+color+"");
-
     });
 
     $(".js-impaired-toggle").click(function () {
