@@ -10,18 +10,18 @@ header.page-header
                         .impaired-options-item__name Размер шрифта:
                         .impaired-options-item__content
                             .page-fonts
-                                .page-fonts__item.page-fonts__item_small.active a
-                                .page-fonts__item a
-                                .page-fonts__item.page-fonts__item_large a
+                                .page-fonts__item(data-page-fz='16').page-fonts__item_small.active.js-page-fz a
+                                .page-fonts__item(data-page-fz='18').js-page-fz a
+                                .page-fonts__item(data-page-fz='20').page-fonts__item_large.js-page-fz a
 
                 .impaired-options-grid__item
                     .impaired-options-item
                         .impaired-options-item__name Цветовая схема:
                         .impaired-options-item__content
                             .color-scheme
-                                .color-scheme__item.color-scheme__item_white a
-                                .color-scheme__item.color-scheme__item_dark a
-                                .color-scheme__item.color-scheme__item_blue a
+                                .color-scheme__item(data-color-scheme='white').color-scheme__item_white.active.js-color-scheme a
+                                .color-scheme__item(data-color-scheme='black').color-scheme__item_black.js-color-scheme a
+                                .color-scheme__item(data-color-scheme='blue').color-scheme__item_blue.js-color-scheme a
 
                 .impaired-options-grid__item
                     .impaired-options-item.js-impaired-toggle
@@ -56,7 +56,7 @@ header.page-header
                         i.infographic-box__icon.icon-phone
                     .infographic-box__content +7 (473) 205-92-48
 
-    .page-header__main.site-bg-style
+    .page-header__main
         .container
             .header-main-box
                 .header-main-box__hamburger

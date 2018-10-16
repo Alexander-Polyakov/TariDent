@@ -10,7 +10,7 @@ html
         +title('Главная')
         include pug/styles.pug
 
-    body
+    body.page-fz-16
         .page
 
                 include pug/components/header
@@ -24,6 +24,7 @@ html
                                 .preview-section__title-box
                                     .preview-section__title СТОМАТОЛОГИЯ БЕЗ БОЛИ
                                 .preview-section__content-box
+                                    .preview-section__content-bg
                                     .preview-section__content
                                         .preview-description
                                             .preview-description__title.st-title Удаление зубов ультразвуком <br/> PIEZOTOME SOLO
@@ -40,7 +41,9 @@ html
                                                             i.circle-plus-icon
                                                         .list-item__text Пациент субъективно вообще ничего не ощущает кроме звука работы аппарата.
 
-                                img(src='./images/preview1.jpg' alt='preview').preview-section__image
+                                .preview-section__image-box
+                                    .preview-section__image-bg
+                                    img(src='./images/preview1.jpg' alt='preview').preview-section__image
 
 
                         .page-section
