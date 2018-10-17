@@ -173,7 +173,7 @@ body
 
 .page
     min-width: 320px
-    min-height: 100vh
+    height: 100vh
     position: relative
     display: flex
     flex-direction: column
@@ -213,15 +213,18 @@ body
 
 
 .page-menu
+    background-color: $blue
+    color: #fff
     &__header
         position: relative
-        padding: 10px 50px 10px 10px
-    &__close
-        position: absolute
-        right: 10px
-        top: 50%
-        transform: translateY(-50%)
-        z-index: 30
+        padding: 20px
+        justify-content: space-between
+        height: 80px
+        display: flex
+        align-items: center
+        border-bottom: 1px solid #fff 
+    &__title
+        font-weight: 700
 
 .popups
     &__popup
@@ -243,11 +246,11 @@ body
 
 
 .form-popup
-    width: 400px
+    width: 680px
     padding: 30px 20px 20px
     position: relative
-    color: #fff
-    background-color: $blueDark
+    box-shadow: 0 5px 10px rgba(102, 102, 102, 0.35 )
+    background-color: #fff
     pointer-events: auto
     &:before
         content: ''
@@ -260,35 +263,9 @@ body
         top: 0
     &__close
         position: absolute
-        right: 10px
-        top: 10px
-
-.popup-total-price
-    padding-top: 20px
-    display: flex
-    justify-content: space-between
-    align-items: center
-    &__value
-        font-weight: 600
-        font-size: 16px
-
-.notice
-    border: 2px solid $yellow
-    background-color: $lightGray
-    padding: 20px
-    display: flex
-    align-items: center
-    &__icon
-        width: 64px
-        height: 64px
-        border: 5px solid #333
-        font-size: 50px
-        text-align: center
-        line-height: 54px
-        margin-right: 20px
-        border-radius: 50%
-        flex-shrink: 0
-        font-weight: 600
+        right: 20px
+        top: 30px
+        z-index: 50
 
 .st-title
     font-size: 1.65em 
@@ -316,39 +293,20 @@ body
         background-color: #fff
         transition: all 0.5s ease 0s
 
-.basket-circle
-    width: 40px
-    height: 40px
-    border-radius: 50%
-    text-align: center
-    line-height: 40px
-    background-color: $yellow
-    border: 1px solid $darkGray
-    display: inline-block
-    vertical-align: middle
-    cursor: pointer
-    color: inherit
-    &__icon
-        font-size: 18px
-
 .input
     width: 100%
     height: 50px
-    border: 1px solid $darkGray
+    border: 1px solid #ccc
     padding: 0 15px
     font-size: 13px
     color: #333
     font-family: inherit
     transition: all 0.3s ease 0s
     +phc(#666)
-    &:focus
-        background-color: $lightGray
     &.error
         color: $red
         border-color: $red
         +phc($red)
-    &_h_32
-        height: 32px
 
 .textarea
     width: 100%
@@ -370,14 +328,6 @@ body
     &_h_80
         height: 80px
 
-.section-title
-    font-size: 28px
-    margin: 0 auto
-    max-width: 580px
-    line-height: 1.2em
-    font-weight: 600
-    text-align: center
-
 .st-link
     text-decoration: underline
     color: inherit
@@ -392,39 +342,40 @@ body
             text-decoration: underline
 
 .btn-close
-    width: 20px
-    height: 20px
+    width: 30px
+    height: 30px
     position: relative
     outline: none
     background-color: inherit
     cursor: pointer
     border: none
-    transition: all 0.5s ease 0s
-    transform: rotate(45deg)
-    border-radius: 50%
     overflow: hidden
-    &:before, &:after
-        content: ''
+    &__cross
         position: absolute
-        background-color: #fff
-        transition: all 0.5s ease 0s
-    &:before
-        width: 18px
-        height: 4px
-        top: 50%
-        margin-top: -2px
-        left: 50%
-        margin-left: -9px
-    &:after
-        width: 4px
-        height: 18px
-        top: 50%
-        margin-top: -9px
-        margin-left: -2px
-        left: 50%
-    &:hover
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        transform: rotate(45deg)
         &:before, &:after
+            content: ''
+            position: absolute
             background-color: $red
+            transition: all 0.5s ease 0s
+            border-radius: 5px
+        &:before
+            width: 100%
+            height: 8px
+            top: 50%
+            margin-top: -4px
+            left: 0
+        &:after
+            width: 8px
+            height: 100%
+            top: 0
+            margin-left: -4px
+            left: 50%
+
 
 
 .st-text
@@ -456,7 +407,7 @@ body
                 margin-bottom: 0
 
 .st-button
-    padding: 11px 15px
+    padding: 10px 15px
     font-size: 1em
     font-weight: 700
     font-family: inherit
@@ -471,10 +422,10 @@ body
     display: inline-block
     vertical-align: middle
     outline: none
-    border: none
     text-align: center
     position: relative
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.34)
+    border: 1px solid $red
     &_shadow_off
         box-shadow: none
     &_w_default
@@ -488,6 +439,42 @@ body
     &:hover
         background-color: #fff
         color: $red
+        border-color: #fff
+    &_v2:hover
+        border-color: $red
+
+.field-label
+    position: relative
+    display: block
+    &__title
+        position: absolute
+        left: 0
+        line-height: 50px
+        padding: 0 15px
+        width: 100%
+        font-size: 14px
+        pointer-events: none
+        transition: all 0.3s ease 0s
+        bottom: 0
+    &__border
+        content: ''
+        height: 2px
+        background-color: $red
+        width: 0
+        left: 0
+        bottom: 0
+        position: absolute
+        z-index: 50
+        transition: all 0.3s ease 0s
+    &__field:focus ~
+        .field-label__border
+            width: 100%
+        .field-label__title
+            bottom: 100%
+            line-height: 20px
+            padding: 0
+            font-size: 12px
+            color: $red
 
 .st-label
     position: relative
@@ -545,115 +532,6 @@ body
     &__tablet-nav
         display: none
 
-.products-list
-    &__item
-        margin-bottom: 15px
-        &:last-child
-            margin-bottom: 0
-    &_header-card
-        max-height: 330px
-        overflow-y: auto
-        overflow-x: auto
-        padding-right: 20px
-        .products-list__item
-            border-bottom: 1px solid $lightGray
-            margin-bottom: 0
-
-
-.products-list-item
-    padding: 5px
-    display: flex
-    align-items: center
-    justify-content: space-between
-    border: 1px solid $darkGray
-    position: relative
-    &_basket
-        padding-right: 50px
-        .products-list-item__text
-            width: auto
-            flex-shrink: 1
-        .products-list-item__close
-            position: absolute
-            top: 50%
-            right: 5px
-            transform: translateY(-50%)
-    &_single
-        padding: 10px 0
-        border: none
-        border-bottom: 1px solid $lightGray
-        .products-list-item__text
-            width: auto
-            flex-shrink: 1
-    &_header-card
-        padding: 15px 0
-        border: none
-    &__image
-        width: 100px
-        flex-shrink: 0
-    &__text
-        padding: 5px 10px
-        width: 350px
-        flex-shrink: 0
-    &__gift
-        flex: 1
-        flex-shrink: 0
-        text-align: center
-        text-transform: uppercase
-        padding: 5px
-    &__counter
-        padding: 5px 10px
-        width: 150px
-        flex-shrink: 0
-    &__price-box
-        width: 140px
-        flex-shrink: 0
-        padding: 5px 10px
-    &__price
-        font-size: 18px
-        font-weight: 600
-        line-height: 1.2em
-
-.counter
-    display: flex
-    &__button
-        width: 35px
-        height: 35px
-        background-color: $yellow
-        position: relative
-        cursor: pointer
-        &:before
-            content: ''
-            width: 50%
-            left: 26%
-            position: absolute
-            height: 4px
-            top: 50%
-            margin-top: -2px
-            background-color: #000
-        &_plus
-            &:after
-                content: ''
-                height: 50%
-                left: 50%
-                position: absolute
-                width: 4px
-                top: 25%
-                margin-left: -2px
-                background-color: #000
-    &__field
-        -moz-appearance: textfield
-        margin: 0 5px
-        width: 50px
-        flex-shrink: 0
-        height: 35px
-        padding: 0
-        text-align: center
-        &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
-            -webkit-appearance: none
-            margin: 0
-        &:focus
-            outline: none
-
 .logo
     display: block
     position: relative
@@ -693,8 +571,78 @@ body
     justify-content: space-between
     &__item
         flex: 1
+    &_sidebar
+        display: block
+        .main-nav-item__link
+            height: 60px
+            &:before
+                display: none
+        .main-nav__item
+            border-bottom: 1px solid #fff
+
+    &_submenu
+        .main-nav-item__link-box
+            border-bottom: 1px solid #fff
+        .main-nav-item__link
+            height: auto
+            background-color: transparent
+            text-align: left
+            padding: 15px 20px
+            display: block
+            font-weight: normal
+            text-transform: none
+        .main-nav-item__dropmenu .main-nav-item__link
+            padding: 10px 20px 10px 30px
+        .main-nav-item__toggle
+            background-color: $blue
 
 .main-nav-item
+    &__link-box
+        position: relative
+    &__toggle
+        position: absolute
+        right: 0
+        top: 0
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        width: 80px
+        height: 100%
+        border: none
+        outline: none
+        cursor: pointer
+        padding-right: 40px
+        border-left: 1px solid #fff
+        color: #fff
+        background-color: $red
+        font-weight: 700
+        font-family: inherit
+        font-size: 16px
+        &:after
+            content: ''
+            width: 14px
+            height: 14px
+            position: absolute
+            top: 50%
+            right: 10px
+            margin-top: -12px
+            border-top: 3px solid #fff
+            border-right: 3px solid #fff
+            transform: rotate(135deg)
+        &_prev
+            left: 0
+            right: auto
+            border-left: none
+            border-right: 1px solid #333
+            width: 30px
+            padding: 0
+            &:after
+                right: auto
+                left: 10px
+                transform: rotate(-135deg)
+        &:hover
+            background-color: #a4cfe2
+
     &__link
         display: flex
         cursor: pointer
@@ -708,13 +656,30 @@ body
         font-weight: 700
         padding: 0 20px
         white-space: nowrap
+        position: relative
+        text-transform: uppercase
+        &:before
+            content: ''
+            position: absolute
+            width: 0
+            height: 4px
+            left: 50%
+            z-index: 20
+            bottom: 0
+            background-color: $red
+            transition: all 0.5s ease 0s
         &:hover
-            background-color: #fff
-            color: $red
+            background-color: #a4cfe2
+            color: $red 
             .hamburger__line
                 background-color: $red
+            &:before
+                left: 15%
+                width: 70%
     &__link-icon
         margin-right: 10px
+    &__dropmenu
+        display: none
 
 .breadcrumbs
     font-size: 0.9em
@@ -792,7 +757,10 @@ body
 .infographic-box
     display: flex
     align-items: center
+    color: inherit
+    text-decoration: none
     &_phone
+        pointer-events: none
         .infographic-box__content
             font-size: 1.6em
             line-height: 1.2em
@@ -990,6 +958,7 @@ body
         transition: all 0.3s ease 0s
 
 .description-box
+    box-shadow: 0 5px 10px rgba(102, 102, 102, 0.35)
     &_accordion
         .description-box__header
             cursor: pointer
@@ -1037,6 +1006,8 @@ body
 .detailed-descr
     display: flex
     justify-content: space-between
+    &__notice
+        margin-bottom: 20px
     &__text
         margin-bottom: 30px
     &__section
@@ -1066,6 +1037,11 @@ body
         left: 0
         width: 100%
         height: 300px
+        
+        
+.notice
+    background-color: #a4cfe2
+    padding: 15px
 
 .parallax-section
     -webkit-background-size: cover
@@ -1194,7 +1170,6 @@ body
 .accordion-list
     &__item
         margin-bottom: 30px
-        box-shadow: 0 5px 10px rgba(102, 102, 102, 0.35)
         &:last-child
             margin-bottom: 0
 
@@ -1264,6 +1239,7 @@ body
         position: relative
         z-index: 100
         box-shadow: 0 5px 10px rgba(102, 102, 102, 0.35)
+        overflow: hidden
     &__nav-box
         background-color: #cbe3ef
         padding: 20px 0
@@ -1327,8 +1303,8 @@ body
         transition: all 0.3s ease 0s
         color: #fff
         &:hover
-            border-color: #000
-            color: #000
+            background-color: #fff
+            color: $blue
 
 .small-slider
     height: 100%
@@ -1366,7 +1342,7 @@ body
         margin-top: -18px
         border-left: 10px solid $red
         border-bottom: 10px solid $red
-        transform: rotate(35deg)
+        transform: rotate(45deg)
     .owl-nav button.owl-next
         left: auto
         transform: rotate(-135deg)
@@ -1665,6 +1641,19 @@ body
             width: 60%
 
 @media screen and (max-width: 600px)
+    .page-footer__soc-box
+        display: block
+        .soc-list
+            margin-bottom: 15px
+
+    .page-footer-info
+        display: block
+        text-align: center
+        padding: 0
+
+    .page-footer-info__icon
+        display: none
+
     .map-section__map
         height: 300px
         position: static
@@ -1686,7 +1675,8 @@ body
 
         &__logo
             width: 200px
-            
+            padding: 0 10px
+
     .page-header__contacts-section
         position: absolute
         top: 100%

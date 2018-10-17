@@ -20,6 +20,13 @@ $(document).ready(function() {
         $(".page-header__contacts-section").stop().slideToggle(400);
     });
 
+
+    $(".js-dropmenu-toggle").click(function (e) {
+        e.preventDefault();
+        $(this).closest(".js-dropmenu-item").toggleClass('dropmenu-opened');
+        $(this).closest(".js-dropmenu-item").children(".main-nav-item__dropmenu").slideToggle('400');
+    });
+
     // $(".js-accordion").each(function () {
     //     var _this = $(this),
     //         accordionItems = _this.find('.description-box'),
@@ -298,12 +305,6 @@ $(document).ready(function() {
         $('.js-popups-overlay').fadeOut(400);
     });
 
-
-    $(".js-dropmenu-toggle").click(function (e) {
-        e.preventDefault();
-        $(this).closest(".main-nav").toggleClass('dropmenu-opened');
-        // $(this).closest(".js-dropmenu").find(".main-nav-item__dropmenu").slideToggle('400');
-    });
 
 
     $("[data-fancybox]").fancybox({

@@ -92,9 +92,9 @@ html
 
                                         .detailed-descr__section
                                             .detailed-descr__slider-box
+                                                .detailed-descr__notice.notice
+                                                    p Это предмет желаний любого хорошего хирурга высокой квалификации.
                                                 .st-text
-                                                    p
-                                                        b Это предмет желаний любого хорошего хирурга высокой квалификации.
                                                     p Использовать пьезоаппарат можно при любых хирургических манипуляциях на костной ткани: от удаления зубов до сложных костных реконструкций на альвеолярном отростке челюстей с целью имплантации.
                                                     p Таким образом, аппарат значительно минимизирует  травматичность проводимых операций, что улучшает результаты работы и сокращает сроки заживления послеоперационных ран. Особенно это касается операций, связанных с имплантатами. Созидательные операции должны приносить врачу и пациенту только радость и удовольствие!
                                                 .detailed-descr__slider
@@ -140,13 +140,19 @@ html
                                                     .st-form__line
                                                         .st-title Записаться на прием
                                                     .st-form__line
-                                                        input(type="text" placeholder='Ваше имя').input
+                                                        label.field-label
+                                                            input(type="text").input.field-label__field
+                                                            .field-label__title Ваше имя *
+                                                            i.field-label__border
                                                     .st-form__line
-                                                        input(type="text" placeholder='Номер телефона').input
+                                                        label.field-label
+                                                            input(type="text").input.field-label__field
+                                                            .field-label__title Номер телефона *
+                                                            i.field-label__border
                                                     .st-form__line.st-form__line_consent
-                                                        .checkbox-label
-                                                            input(id='check1' type='checkbox').checkbox-label__input
-                                                            label(for='check1').checkbox-label__label
+                                                        label.checkbox-label
+                                                            input(type='checkbox').checkbox-label__input
+                                                            span
                                                                 | Я даю согласие на обработку
                                                                 |
                                                                 a(href='#') персональных данных
