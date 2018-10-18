@@ -33,21 +33,88 @@ $orange: #f2ba0f
 $gradientYellow: linear-gradient(#ffeb0c, #ebb306)
 
 
-[data-page-fz='16']
+.desktop-hidden
+    display: none
+
+.impaired-opened
+    .page-header__top-item_impaired
+        display: none
+    .main-nav-item__link::before
+        display: none
+    .st-button
+        border-color: transparent
+        &:hover
+            border-color: transparent
+
+[data-body-fz='16']
     font-size: 16px
 
-.page-fz-18
+[data-body-fz='18']
     font-size: 18px
     .main-nav-item__link
         padding: 0 10px
 
-.page-fz-20
+[data-body-fz='20']
     font-size: 20px
     .main-nav-item__link
         padding: 0 10px
 
-.color-scheme-white
-    background-color: #fff 
+
+[data-body-scheme='white'] 
+    background-color: #fff
+    color: #000
+    .page-footer__top-section
+        color: #000
+    .page-footer__main
+        color: #000
+        background-color: #fff
+    .soc-list__item
+        color: #000
+        border-color: #000
+    .contacts-map__content
+        color: #000
+        background-color: #fff
+    .contacts-map__header
+        border-color: #000
+    .map-section__nav-box
+        background-color: #fff
+    .map-section
+        border-bottom: 2px solid #000 
+    .breadcrumbs a
+        color: inherit
+    .small-slider .owl-nav button.owl-next, .small-slider .owl-nav button.owl-prev
+        border-left: 10px solid #000
+        border-bottom: 10px solid #000
+    .small-slider button.owl-dot
+        background-color: transparent
+        border: 2px solid #000
+        &.active
+            background-color: #000
+    .counter-list__item:before
+        border-color: #000
+    .sidebar-menu__item
+        border-color: #000
+    .sidebar-menu__toggle:before
+        border-bottom: 3px solid #000
+        border-right: 3px solid #000
+    .sidebar-menu__dropdown
+        border-top: 1px solid #000
+        background-color: transparent
+    .page-menu__header
+        border-color: #000 
+    .notice
+        background-color: #000
+        color: #fff
+    .page-menu
+        background-color: #fff
+        color: #000
+    .btn-close__cross:after, .btn-close__cross:before
+        background-color: #000
+    .form-popup:before
+        background-color: #000
+    .infographic-box__circle
+        background-color: #fff
+        color: #000
     .st-button
         background-color: #000
         color: #fff
@@ -73,29 +140,20 @@ $gradientYellow: linear-gradient(#ffeb0c, #ebb306)
             background-color: #000 
             .hamburger__line
                 background-color: #fff
-
     .preview-section__content-box
-        color: #000 
-        
+        color: #000
     .preview-section__content-bg
         background-color: #fff
         border: 1px solid #000
-
-
     .preview-section__title
         background-color: #000
-
     .preview-section__title-box 
         &:after
             background-color: #000
-            
     .circle-plus-icon
         background-color: #000
-
     .st-title_bot_line
         border-color: #000
-
-
     .footnote-box
         background-color: #fff
         border: 1px solid #000
@@ -103,45 +161,177 @@ $gradientYellow: linear-gradient(#ffeb0c, #ebb306)
 
     .footnote-box__footnote
         color: #fff
-        
     .footnote-box__footnote-bg
         background-color: #000
-        
-
     .parallax-section__inner
         color: #000
-
     .parallax-section
         &:before
             background-color: #fff
             opacity: 0.7
-            
-
     .st-link
         color: #000
-
-
     .checkbox-label
         background-color: #fff
         border: 1px solid #000
-
-
     .st-form__footer
         background-color: #fff
         border: 1px solid #000
-
-
     .st-table__line:nth-child(2n+2)
         background-color: #fff
         border-top: 1px solid #000
         border-bottom: 1px solid #000
-
-
     .table-box__header::before
         background-color: #000
-
     .footnote-box__arrow
         border-color: #000
+
+
+[data-body-scheme='black']
+    background-color: #000 
+    color: #fff
+    .detailed-descr__section-content
+        color: #000
+    .description-box__main
+        background-color: #000 
+    .page-footer__top-section
+        color: #fff
+    .page-footer__main
+        color: #fff
+        background-color: #000 
+    .soc-list__item
+        color: #fff
+        border-color: #000
+    .contacts-map__content
+        color: #fff
+        background-color: #000 
+    .contacts-map__header
+        border-color: #000
+    .map-section__nav-box
+        background-color: #000 
+    .map-section
+        border-bottom: 2px solid #000
+    .breadcrumbs a
+        color: inherit
+    .small-slider .owl-nav button.owl-next, .small-slider .owl-nav button.owl-prev
+        border-left: 10px solid #fff
+        border-bottom: 10px solid #fff
+    .small-slider button.owl-dot
+        background-color: transparent
+        border: 2px solid #000
+        &.active
+            background-color: #000
+    .counter-list__item:before
+        border-color: #000
+    .sidebar-menu__item
+        border-color: #fff
+    .sidebar-menu__toggle:before
+        border-bottom: 3px solid #fff
+        border-right: 3px solid #fff
+    .sidebar-menu__dropdown
+        border-top: 1px solid #fff
+        background-color: #fff
+        .sidebar-menu__link
+            border-bottom: 1px solid #000
+            &:last-child
+                border: none  
+    .page-menu__header
+        border-color: #000
+    .notice
+        background-color: #000 
+        color: #fff
+    .page-menu
+        background-color: #000 
+        color: #fff
+    .btn-close__cross:after, .btn-close__cross:before
+        background-color: #fff
+    .form-popup:before
+        background-color: #fff
+    .form-popup
+        background-color: #000
+    .infographic-box__circle
+        background-color: #000 
+        color: #fff
+    .st-button
+        background-color: #fff
+        color: #000
+        box-shadow: none
+        &:hover
+            background-color: #fff
+            color: #000 
+    .main-nav__item
+        border-right: 1px solid #fff
+        &:first-child
+            border-left: 1px solid #fff
+    .page-header__main
+        background-color: #000 
+        border-top: 1px solid #fff
+        border-bottom: 1px solid #fff
+    .main-nav-item__link
+        background-color: #000 
+        color: #fff
+        .hamburger__line
+            background-color: #fff
+        &:hover
+            color: #000
+            background-color: #fff
+            .hamburger__line
+                background-color: #000
+    .preview-section__content-box
+        color: #fff
+    .preview-section__content-bg
+        background-color: #000 
+        border: 1px solid #000
+    .preview-section__title
+        background-color: #fff
+        color: #000
+    .preview-section__title-box
+        &:after
+            background-color: #fff
+    .circle-plus-icon
+        background-color: #000 
+    .st-title_bot_line
+        border-color: #000
+    .footnote-box
+        background-color: #000 
+        border: 1px solid #fff
+        color: #fff
+    .footnote-box__footnote
+        color: #000 
+    .footnote-box__footnote-bg
+        background-color: #fff
+    .parallax-section__inner
+        color: #fff
+    .parallax-section
+        &:before
+            background-color: #000 
+            opacity: 0.7
+    .st-link
+        color: #fff
+    .field-label__title
+        background-color: #000
+    .doctor-short-card__main
+        background-color: #000
+        border: 1px solid #fff
+    .checkbox-label
+        background-color: #fff
+        color: #000 
+    .st-form__footer
+        background-color: #000 
+        border: 1px solid #000
+    .st-table__line:nth-child(2n+2)
+        background-color: #000 
+        border-top: 1px solid #000
+        border-bottom: 1px solid #000
+    .table-box__header:before
+        background-color: #000
+    .st-box
+        background-color: #000
+        border: 1px solid #fff
+
+    .st-form_abs_footer
+        border: 1px solid #fff
+        background-color: #000
 
 .fs0
     flex-shrink: 0
@@ -302,7 +492,6 @@ body
     color: #333
     font-family: inherit
     transition: all 0.3s ease 0s
-    +phc(#666)
     &.error
         color: $red
         border-color: $red
@@ -310,23 +499,15 @@ body
 
 .textarea
     width: 100%
-    height: 180px
+    height: 150px
     resize: none
-    border: 1px solid $darkGray
+    border: 1px solid #ccc
     padding: 11px 15px
     font-size: 13px
-    color: #666
+    color: #333
     transition: all 0.3s ease 0s
     font-family: inherit
-    +phc(#666)
-    &:focus
-        background-color: $lightGray
-    &.error
-        color: $red
-        border-color: $red
-        +phc($red)
-    &_h_80
-        height: 80px
+
 
 .st-link
     text-decoration: underline
@@ -448,14 +629,16 @@ body
     display: block
     &__title
         position: absolute
-        left: 0
-        line-height: 50px
+        left: 1px
+        line-height: 48px
+        background-color: #fff
         padding: 0 15px
-        width: 100%
         font-size: 14px
         pointer-events: none
         transition: all 0.3s ease 0s
-        bottom: 0
+        top: 1px
+        right: 1px
+        bottom: 1px
     &__border
         content: ''
         height: 2px
@@ -466,15 +649,17 @@ body
         position: absolute
         z-index: 50
         transition: all 0.3s ease 0s
-    &__field:focus ~
+    &.focused
         .field-label__border
             width: 100%
         .field-label__title
-            bottom: 100%
+            top: -20px
+            bottom: auto
             line-height: 20px
             padding: 0
             font-size: 12px
             color: $red
+            background: transparent
 
 .st-label
     position: relative
@@ -707,13 +892,11 @@ body
 .page-header
     position: relative
     z-index: 200
-    &.impaired-opened
-        .page-header__top-item_impaired
-            display: none
     &__main
         background-color: $blue
     &__impaired-section
         background-color: #ccc
+        color: #333
         display: none
     &__contacts-section
         padding: 15px 0
@@ -1459,17 +1642,18 @@ body
         width: 40px
         height: 40px
         border-radius: 5px
-        border: 1px solid #333
+        border: 1px solid #000
         line-height: 38px
         text-align: center
         margin: 5px
+        color: #000
         cursor: pointer
         &_small
             font-size: 16px
         &_large
             font-size: 24px
         &.active
-            background-color: #333
+            background-color: #000
             color: #fff
 
 .color-scheme
@@ -1485,11 +1669,12 @@ body
         text-align: center
         margin: 5px
         cursor: pointer
+        color: #000
         &_white
-            border: 1px solid #333
+            border: 1px solid #000
             background-color: #fff
         &_black
-            background-color: #333
+            background-color: #000
             color: #fff
         &_blue
             background-color: $blueLight
@@ -1502,7 +1687,63 @@ body
 .js-impaired-toggle
     cursor: pointer
 
+
+.sidebar-menu
+    font-size: 0.9em
+    line-height: 1.2em
+    &__link-box
+        position: relative
+    &__item
+        border-bottom: 1px solid #fff
+        &.opened
+            .sidebar-menu__toggle:before
+                transform: rotate(-135deg)
+                margin-top: -4px
+    &__link
+        padding: 16px 20px
+        display: block
+        color: inherit
+        text-decoration: none
+    &__dropdown
+        display: none
+        color: #333
+        background-color: #a4cfe2
+        border-top: 1px solid #fff
+    &__toggle
+        width: 60px
+        height: 100%
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 50
+        cursor: pointer
+        &:before
+            content: ''
+            width: 16px
+            height: 16px
+            border-bottom: 3px solid #fff
+            border-right: 3px solid #fff
+            position: absolute
+            top: 50%
+            margin-top: -16px
+            left: 50%
+            margin-left: -10px
+            transform: rotate(45deg)
+            transition: all 0.3s ease 0s
+
+
 @media screen and (max-width: 1140px)
+
+    .popups__popup
+        display: block
+
+    .form-popup
+        margin: 50px auto
+        width: 90%
+
+    .desktop-hidden
+        display: block
+
     .map-section__container
         padding: 0
 

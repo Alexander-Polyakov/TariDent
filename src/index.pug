@@ -10,7 +10,7 @@ html
         +title('Главная')
         include pug/styles.pug
 
-    body(data-page-fz='16' data-color-scheme='normal')
+    body(data-body-fz='16' data-body-scheme='normal')
         .page
 
                 include pug/components/header
@@ -140,13 +140,13 @@ html
                                                     .st-form__line
                                                         .st-title Записаться на прием
                                                     .st-form__line
-                                                        label.field-label
+                                                        label.field-label.js-field-label
                                                             input(type="text").input.field-label__field
                                                             .field-label__title Ваше имя *
                                                             i.field-label__border
                                                     .st-form__line
-                                                        label.field-label
-                                                            input(type="text").input.field-label__field
+                                                        label.field-label.js-field-label
+                                                            input(type="tel").input.field-label__field
                                                             .field-label__title Номер телефона *
                                                             i.field-label__border
                                                     .st-form__line.st-form__line_consent
@@ -162,29 +162,29 @@ html
                                 .page-section__section
                                     .accordion-list
                                         .accordion-list__item
-                                            .description-box.description-box_accordion
-                                                .description-box__header
+                                            .description-box.description-box_accordion.js-collapse-parent
+                                                .description-box__header.js-collapse-button
                                                     .footnote-box.footnote-box_accordion
                                                         .footnote-box__footnote
                                                             .footnote-box__footnote-bg
                                                             i.footnote-box__icon.icon-info-circled-1
                                                         .footnote-box__title Удаление зуба мудрости ультразвуком – мировая признанная методика
                                                         .footnote-box__arrow
-                                                .description-box__main
+                                                .description-box__main.js-collapse-dropdown
                                                     .st-text
                                                         p Проблемы, связанные с зубом мудрости, встречаются практически у каждого человека. Сложности с прорезыванием, неправильное положение в челюсти, боли и дискомфорт. Генетические изменения, связанные с потреблением обработанной пищи, изменяют кости челюсти человека – они становятся меньше, зубам мудрости не поместиться в их обычном положении.
                                                     .description-box__more-link
                                                         .st-link.st-link_blue.ttu ПОДРОБНЕЕ
                                         .accordion-list__item
-                                            .description-box.description-box_accordion.opened
-                                                .description-box__header
+                                            .description-box.description-box_accordion.opened.js-collapse-parent
+                                                .description-box__header.js-collapse-button
                                                     .footnote-box.footnote-box_accordion
                                                         .footnote-box__footnote
                                                             .footnote-box__footnote-bg
                                                             i.footnote-box__icon.icon-attention-circled
                                                         .footnote-box__title Удаление зуба мудрости ультразвуком – мировая признанная методика
                                                         .footnote-box__arrow
-                                                .description-box__main
+                                                .description-box__main.js-collapse-dropdown
                                                     .st-text
                                                         p Проблемы, связанные с зубом мудрости, встречаются практически у каждого человека. Сложности с прорезыванием, неправильное положение в челюсти, боли и дискомфорт. Генетические изменения, связанные с потреблением обработанной пищи, изменяют кости челюсти человека – они становятся меньше, зубам мудрости не поместиться в их обычном положении.
                                                     .description-box__more-link

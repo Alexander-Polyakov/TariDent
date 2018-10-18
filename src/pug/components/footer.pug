@@ -34,59 +34,67 @@ footer.page-footer
             button.btn-close.js-page-menu-close
                 .btn-close__cross
 
-    ul.main-nav.main-nav_sidebar
-        li.main-nav__item.main-nav-item.js-dropmenu-item
-            .main-nav-item__link-box
-                a(href='#').main-nav-item__link
-                    span.main-nav-item__link-text НАШИ УСЛУГИ
-                .main-nav-item__toggle.js-dropmenu-toggle 3
-            .main-nav-item__dropmenu.js-dropmenu-item
-                ul.main-nav.main-nav_sidebar.main-nav_submenu
-                    li.main-nav__item.main-nav-item.js-dropmenu-item
-                        .main-nav-item__link-box
-                            a(href='#').main-nav-item__link
-                                span.main-nav-item__link-text Терапия
-                            .main-nav-item__toggle.js-dropmenu-toggle 3
-                        .main-nav-item__dropmenu.js-dropmenu-item
-                            ul.main-nav.main-nav_sidebar
-                                li.main-nav__item.main-nav-item
-                                    a(href='#').main-nav-item__link
-                                        span.main-nav-item__link-text Лечение кариеса
-                                li.main-nav__item.main-nav-item
-                                    a(href='delivery.html').main-nav-item__link
-                                        span.main-nav-item__link-text Лечение кариеса
-                                li.main-nav__item.main-nav-item
-                                    a(href='shares.html').main-nav-item__link
-                                        span.main-nav-item__link-text Лечение кариеса
-                                li.main-nav__item.main-nav-item
-                                    a(href='reviews.html').main-nav-item__link
-                                        span.main-nav-item__link-text Лечение кариеса
+    ul.sidebar-menu
+        li.sidebar-menu__item.js-dropmenu-item
+            .sidebar-menu__link-box
+                a(href='#').sidebar-menu__link Терапия
+                .sidebar-menu__toggle.js-dropmenu-toggle
+            .sidebar-menu__dropdown
+                .sidebar-menu__item
+                    a(href='#').sidebar-menu__link Терапия услуга 1 Пародонтология
+                .sidebar-menu__item
+                    a(href='#').sidebar-menu__link Терапия услуга 2Наращивание зубов
+                .sidebar-menu__item
+                    a(href='#').sidebar-menu__link Терапия услуга3 Отбеливание зубов
 
-                    li.main-nav__item.main-nav-item
-                        a(href='#').main-nav-item__link
-                            span.main-nav-item__link-text Лечение кариеса
-                    li.main-nav__item.main-nav-item
-                        a(href='delivery.html').main-nav-item__link
-                            span.main-nav-item__link-text Лечение кариеса
-                    li.main-nav__item.main-nav-item
-                        a(href='shares.html').main-nav-item__link
-                            span.main-nav-item__link-text Лечение кариеса
-                    li.main-nav__item.main-nav-item
-                        a(href='reviews.html').main-nav-item__link
-                            span.main-nav-item__link-text Лечение кариеса
+        li.sidebar-menu__item.js-dropmenu-item
+            .sidebar-menu__link-box
+                a(href='#').sidebar-menu__link Терапия
+                .sidebar-menu__toggle.js-dropmenu-toggle
+            .sidebar-menu__dropdown
+                .sidebar-menu__item
+                    a(href='#').sidebar-menu__link Терапия услуга 1 Пародонтология
+                .sidebar-menu__item
+                    a(href='#').sidebar-menu__link Терапия услуга 2Наращивание зубов
+                .sidebar-menu__item
+                    a(href='#').sidebar-menu__link Терапия услуга3 Отбеливание зубов
 
-        li.main-nav__item.main-nav-item
-            a(href='#').main-nav-item__link
-                span.main-nav-item__link-text О КЛИНИКЕ
-        li.main-nav__item.main-nav-item
-            a(href='delivery.html').main-nav-item__link
-                span.main-nav-item__link-text ОТЗЫВЫ
-        li.main-nav__item.main-nav-item
-            a(href='shares.html').main-nav-item__link
-                span.main-nav-item__link-text ЦЕНЫ
-        li.main-nav__item.main-nav-item
-            a(href='reviews.html').main-nav-item__link
-                span.main-nav-item__link-text КОНТАКТЫ
+        li.sidebar-menu__item.js-dropmenu-item
+            .sidebar-menu__link-box
+                a(href='#').sidebar-menu__link Терапия
+                .sidebar-menu__toggle.js-dropmenu-toggle
+            .sidebar-menu__dropdown
+                .sidebar-menu__item
+                    a(href='#').sidebar-menu__link Терапия услуга 1 Пародонтология
+                .sidebar-menu__item
+                    a(href='#').sidebar-menu__link Терапия услуга 2Наращивание зубов
+                .sidebar-menu__item
+                    a(href='#').sidebar-menu__link Терапия услуга3 Отбеливание зубов
+
+        li.sidebar-menu__item.js-dropmenu-item
+            .sidebar-menu__link-box
+                a(href='#').sidebar-menu__link Терапия
+                .sidebar-menu__toggle.js-dropmenu-toggle
+            .sidebar-menu__dropdown
+                .sidebar-menu__item
+                    a(href='#').sidebar-menu__link Терапия услуга 1 Пародонтология
+                .sidebar-menu__item
+                    a(href='#').sidebar-menu__link Терапия услуга 2Наращивание зубов
+                .sidebar-menu__item
+                    a(href='#').sidebar-menu__link Терапия услуга3 Отбеливание зубов
+
+        li.sidebar-menu__item.desktop-hidden
+            a(href='#').sidebar-menu__link О клинике
+
+        li.sidebar-menu__item.desktop-hidden
+            a(href='#').sidebar-menu__link Отзывы
+
+        li.sidebar-menu__item.desktop-hidden
+            a(href='#').sidebar-menu__link Цены
+
+        li.sidebar-menu__item.desktop-hidden
+            a(href='#').sidebar-menu__link Контакты
+
 
 
 .page__overlay.js-popups-overlay.js-close-popups.js-page-menu-close
@@ -104,23 +112,23 @@ footer.page-footer
                     .st-form__line
                         .notice Оставьте заявку, администратор клиники свяжется с Вами для подтверждения
                     .st-form__line
-                        label.field-label
+                        label.field-label.js-field-label
                             input(type="text").input.field-label__field
                             .field-label__title Ваше имя *
                             i.field-label__border
                     .st-form__line
-                        label.field-label
-                            input(type="text").input.field-label__field
+                        label.field-label.js-field-label
+                            input(type="tel").input.field-label__field
                             .field-label__title Номер телефона *
                             i.field-label__border
                     .st-form__line
-                        label.field-label
+                        label.field-label.js-field-label
                             input(type="text").input.field-label__field
                             .field-label__title E-mail
                             i.field-label__border
                     .st-form__line
-                        label.field-label
-                            input(type="text").input.field-label__field
+                        label.field-label.js-field-label
+                            textarea.textarea.field-label__field
                             .field-label__title Ваш вопрос
                             i.field-label__border
                     .st-form__line.st-form__line_consent

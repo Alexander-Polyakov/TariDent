@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   </head>
-  <body data-page-fz="16" data-color-scheme="normal">
+  <body data-body-fz="16" data-body-scheme="normal">
     <div class="page">
       <header class="page-header">
         <div class="page-header__impaired-section">
@@ -35,7 +35,7 @@
                     <div class="color-scheme">
                       <div class="color-scheme__item color-scheme__item_white active js-color-scheme" data-color-scheme="white">a</div>
                       <div class="color-scheme__item color-scheme__item_black js-color-scheme" data-color-scheme="black">a</div>
-                      <div class="color-scheme__item color-scheme__item_blue js-color-scheme" data-color-scheme="blue">a</div>
+                      <!--.color-scheme__item(data-color-scheme='blue').color-scheme__item_blue.js-color-scheme a-->
                     </div>
                   </div>
                 </div>
@@ -288,14 +288,14 @@
                         <div class="st-title">Записаться на прием</div>
                       </div>
                       <div class="st-form__line">
-                        <label class="field-label">
+                        <label class="field-label js-field-label">
                           <input class="input field-label__field" type="text">
                           <div class="field-label__title">Ваше имя *</div><i class="field-label__border"></i>
                         </label>
                       </div>
                       <div class="st-form__line">
-                        <label class="field-label">
-                          <input class="input field-label__field" type="text">
+                        <label class="field-label js-field-label">
+                          <input class="input field-label__field" type="tel">
                           <div class="field-label__title">Номер телефона *</div><i class="field-label__border"></i>
                         </label>
                       </div>
@@ -317,8 +317,8 @@
             <div class="page-section__section">
               <div class="accordion-list">
                 <div class="accordion-list__item">
-                  <div class="description-box description-box_accordion">
-                    <div class="description-box__header">
+                  <div class="description-box description-box_accordion js-collapse-parent">
+                    <div class="description-box__header js-collapse-button">
                       <div class="footnote-box footnote-box_accordion">
                         <div class="footnote-box__footnote">
                           <div class="footnote-box__footnote-bg"></div><i class="footnote-box__icon icon-info-circled-1"></i>
@@ -327,7 +327,7 @@
                         <div class="footnote-box__arrow"></div>
                       </div>
                     </div>
-                    <div class="description-box__main">
+                    <div class="description-box__main js-collapse-dropdown">
                       <div class="st-text">
                         <p>Проблемы, связанные с зубом мудрости, встречаются практически у каждого человека. Сложности с прорезыванием, неправильное положение в челюсти, боли и дискомфорт. Генетические изменения, связанные с потреблением обработанной пищи, изменяют кости челюсти человека – они становятся меньше, зубам мудрости не поместиться в их обычном положении.</p>
                       </div>
@@ -338,8 +338,8 @@
                   </div>
                 </div>
                 <div class="accordion-list__item">
-                  <div class="description-box description-box_accordion opened">
-                    <div class="description-box__header">
+                  <div class="description-box description-box_accordion opened js-collapse-parent">
+                    <div class="description-box__header js-collapse-button">
                       <div class="footnote-box footnote-box_accordion">
                         <div class="footnote-box__footnote">
                           <div class="footnote-box__footnote-bg"></div><i class="footnote-box__icon icon-attention-circled"></i>
@@ -348,7 +348,7 @@
                         <div class="footnote-box__arrow"></div>
                       </div>
                     </div>
-                    <div class="description-box__main">
+                    <div class="description-box__main js-collapse-dropdown">
                       <div class="st-text">
                         <p>Проблемы, связанные с зубом мудрости, встречаются практически у каждого человека. Сложности с прорезыванием, неправильное положение в челюсти, боли и дискомфорт. Генетические изменения, связанные с потреблением обработанной пищи, изменяют кости челюсти человека – они становятся меньше, зубам мудрости не поместиться в их обычном положении.</p>
                       </div>
@@ -525,37 +525,51 @@
             </button>
           </div>
         </div>
-        <ul class="main-nav main-nav_sidebar">
-          <li class="main-nav__item main-nav-item js-dropmenu-item">
-            <div class="main-nav-item__link-box"><a class="main-nav-item__link" href="#"><span class="main-nav-item__link-text">НАШИ УСЛУГИ</span></a>
-              <div class="main-nav-item__toggle js-dropmenu-toggle">3</div>
+        <ul class="sidebar-menu">
+          <li class="sidebar-menu__item js-dropmenu-item">
+            <div class="sidebar-menu__link-box"><a class="sidebar-menu__link" href="#">Терапия</a>
+              <div class="sidebar-menu__toggle js-dropmenu-toggle"></div>
             </div>
-            <div class="main-nav-item__dropmenu js-dropmenu-item">
-              <ul class="main-nav main-nav_sidebar main-nav_submenu">
-                <li class="main-nav__item main-nav-item js-dropmenu-item">
-                  <div class="main-nav-item__link-box"><a class="main-nav-item__link" href="#"><span class="main-nav-item__link-text">Терапия</span></a>
-                    <div class="main-nav-item__toggle js-dropmenu-toggle">3</div>
-                  </div>
-                  <div class="main-nav-item__dropmenu js-dropmenu-item">
-                    <ul class="main-nav main-nav_sidebar">
-                      <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="#"><span class="main-nav-item__link-text">Лечение кариеса</span></a></li>
-                      <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="delivery.html"><span class="main-nav-item__link-text">Лечение кариеса</span></a></li>
-                      <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="shares.html"><span class="main-nav-item__link-text">Лечение кариеса</span></a></li>
-                      <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="reviews.html"><span class="main-nav-item__link-text">Лечение кариеса</span></a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="#"><span class="main-nav-item__link-text">Лечение кариеса</span></a></li>
-                <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="delivery.html"><span class="main-nav-item__link-text">Лечение кариеса</span></a></li>
-                <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="shares.html"><span class="main-nav-item__link-text">Лечение кариеса</span></a></li>
-                <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="reviews.html"><span class="main-nav-item__link-text">Лечение кариеса</span></a></li>
-              </ul>
+            <div class="sidebar-menu__dropdown">
+              <div class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Терапия услуга 1 Пародонтология</a></div>
+              <div class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Терапия услуга 2Наращивание зубов</a></div>
+              <div class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Терапия услуга3 Отбеливание зубов</a></div>
             </div>
           </li>
-          <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="#"><span class="main-nav-item__link-text">О КЛИНИКЕ</span></a></li>
-          <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="delivery.html"><span class="main-nav-item__link-text">ОТЗЫВЫ</span></a></li>
-          <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="shares.html"><span class="main-nav-item__link-text">ЦЕНЫ</span></a></li>
-          <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="reviews.html"><span class="main-nav-item__link-text">КОНТАКТЫ</span></a></li>
+          <li class="sidebar-menu__item js-dropmenu-item">
+            <div class="sidebar-menu__link-box"><a class="sidebar-menu__link" href="#">Терапия</a>
+              <div class="sidebar-menu__toggle js-dropmenu-toggle"></div>
+            </div>
+            <div class="sidebar-menu__dropdown">
+              <div class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Терапия услуга 1 Пародонтология</a></div>
+              <div class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Терапия услуга 2Наращивание зубов</a></div>
+              <div class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Терапия услуга3 Отбеливание зубов</a></div>
+            </div>
+          </li>
+          <li class="sidebar-menu__item js-dropmenu-item">
+            <div class="sidebar-menu__link-box"><a class="sidebar-menu__link" href="#">Терапия</a>
+              <div class="sidebar-menu__toggle js-dropmenu-toggle"></div>
+            </div>
+            <div class="sidebar-menu__dropdown">
+              <div class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Терапия услуга 1 Пародонтология</a></div>
+              <div class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Терапия услуга 2Наращивание зубов</a></div>
+              <div class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Терапия услуга3 Отбеливание зубов</a></div>
+            </div>
+          </li>
+          <li class="sidebar-menu__item js-dropmenu-item">
+            <div class="sidebar-menu__link-box"><a class="sidebar-menu__link" href="#">Терапия</a>
+              <div class="sidebar-menu__toggle js-dropmenu-toggle"></div>
+            </div>
+            <div class="sidebar-menu__dropdown">
+              <div class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Терапия услуга 1 Пародонтология</a></div>
+              <div class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Терапия услуга 2Наращивание зубов</a></div>
+              <div class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Терапия услуга3 Отбеливание зубов</a></div>
+            </div>
+          </li>
+          <li class="sidebar-menu__item desktop-hidden"><a class="sidebar-menu__link" href="#">О клинике</a></li>
+          <li class="sidebar-menu__item desktop-hidden"><a class="sidebar-menu__link" href="#">Отзывы</a></li>
+          <li class="sidebar-menu__item desktop-hidden"><a class="sidebar-menu__link" href="#">Цены</a></li>
+          <li class="sidebar-menu__item desktop-hidden"><a class="sidebar-menu__link" href="#">Контакты</a></li>
         </ul>
       </div>
       <div class="page__overlay js-popups-overlay js-close-popups js-page-menu-close"></div>
@@ -576,26 +590,26 @@
                   <div class="notice">Оставьте заявку, администратор клиники свяжется с Вами для подтверждения</div>
                 </div>
                 <div class="st-form__line">
-                  <label class="field-label">
+                  <label class="field-label js-field-label">
                     <input class="input field-label__field" type="text">
                     <div class="field-label__title">Ваше имя *</div><i class="field-label__border"></i>
                   </label>
                 </div>
                 <div class="st-form__line">
-                  <label class="field-label">
-                    <input class="input field-label__field" type="text">
+                  <label class="field-label js-field-label">
+                    <input class="input field-label__field" type="tel">
                     <div class="field-label__title">Номер телефона *</div><i class="field-label__border"></i>
                   </label>
                 </div>
                 <div class="st-form__line">
-                  <label class="field-label">
+                  <label class="field-label js-field-label">
                     <input class="input field-label__field" type="text">
                     <div class="field-label__title">E-mail</div><i class="field-label__border"></i>
                   </label>
                 </div>
                 <div class="st-form__line">
-                  <label class="field-label">
-                    <input class="input field-label__field" type="text">
+                  <label class="field-label js-field-label">
+                    <textarea class="textarea field-label__field"></textarea>
                     <div class="field-label__title">Ваш вопрос</div><i class="field-label__border"></i>
                   </label>
                 </div>
