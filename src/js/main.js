@@ -16,6 +16,37 @@ $(document).ready(function() {
         myMap.geoObjects.add(myPlacemark);
     });
 
+
+    var scrollSettings = getBrowserScrollSize();
+
+    function getBrowserScrollSize() {
+        var css = {
+            "border": "none",
+            "height": "200px",
+            "margin": "0",
+            "padding": "0",
+            "width": "200px"
+        };
+
+        var inner = $("<div>").css($.extend({}, css));
+        var outer = $("<div>").css($.extend({
+            "left": "-1000px",
+            "overflow": "scroll",
+            "position": "absolute",
+            "top": "-1000px"
+        }, css)).append(inner).appendTo("body")
+            .scrollLeft(1000)
+            .scrollTop(1000);
+
+        var scrollSize = {
+            "height": (outer.offset().top - inner.offset().top) || 0,
+            "width": (outer.offset().left - inner.offset().left) || 0
+        };
+
+        outer.remove();
+        return scrollSize;
+    }
+
     $(".js-mobile-contacts-toggle").click(function () {
         $(".page-header__contacts-section").stop().slideToggle(400);
     });
@@ -38,8 +69,6 @@ $(document).ready(function() {
         }
 
     }
-
-
 
     $(".js-page-fz").click(function () {
        $(".js-page-fz").removeClass("active");
@@ -82,7 +111,9 @@ $(document).ready(function() {
     });
 
     function openPopup(popupName, _this){
-        $('body').addClass('ovh');
+        console.log(scrollSettings);
+        $('body').addClass('ovh').css("padding-right", scrollSettings.width);
+
         if (popupName == 'video') {
             var videoSrc = _this.data('video-src');
             $(".js-popup-video").attr('src', videoSrc);
@@ -94,7 +125,7 @@ $(document).ready(function() {
 
 
     $('.js-page-menu-open').click(function () {
-        $('body').addClass('ovh');
+        $('body').addClass('ovh').css("padding-right", scrollSettings.width);
 
         $('.js-page-menu').addClass("opened");
         $('.js-popups-overlay').fadeIn(400);
@@ -102,7 +133,7 @@ $(document).ready(function() {
 
 
     $('.js-page-menu-close').click(function () {
-        $('body').removeClass('ovh');
+        $('body').removeClass('ovh').css("padding-right", "");
 
         $('.js-page-menu').removeClass("opened");
         $('.js-popups-overlay').fadeOut(400);
@@ -116,7 +147,7 @@ $(document).ready(function() {
     });
 
     $(".js-close-popups").click(function () {
-        $('body').removeClass('ovh');
+        $('body').removeClass('ovh').css("padding-right", "");
 
         $(".js-popup-video").attr('src', '');
         $('.js-popups-overlay').fadeOut(400);
@@ -138,4 +169,12 @@ $(document).ready(function() {
 
     $('input[type="tel"]').inputmask({"mask": "+7 (999) 999-9999"});
 
+    $(".description-box .js-full-descr").click(function () {
+        $(this).closest(".description-box").addClass("full-text");
+    });
+
+
+    $(".js-scroll-top").click(function () {
+        $('body, html').animate({scrollTop:0},800)
+    });
 });

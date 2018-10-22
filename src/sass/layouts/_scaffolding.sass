@@ -63,6 +63,10 @@ $gradientYellow: linear-gradient(#ffeb0c, #ebb306)
 [data-body-scheme='white'] 
     background-color: #fff
     color: #000
+    .field-label__title
+        color: #000 !important 
+    .field-label__border
+        background-color: #000
     .page-footer__top-section
         color: #000
     .page-footer__main
@@ -185,11 +189,18 @@ $gradientYellow: linear-gradient(#ffeb0c, #ebb306)
         background-color: #000
     .footnote-box__arrow
         border-color: #000
-
+    .up-page-button:before
+        border-color: #000
 
 [data-body-scheme='black']
     background-color: #000 
     color: #fff
+    .field-label__title
+        color: #fff !important
+    .up-page-button:before
+        border-color: #fff
+    .field-label__border
+        background-color: #fff
     .detailed-descr__section-content
         color: #000
     .description-box__main
@@ -359,16 +370,11 @@ body
     color: #333
     background-color: #f2f8fb
     &.ovh
-        overflow: hidden
+        overflow: hidden 
 
 .page
     min-width: 320px
-    height: 100vh
     position: relative
-    display: flex
-    flex-direction: column
-    &__main
-        flex: 1
     &__menu
         position: fixed
         overflow: hidden
@@ -513,6 +519,8 @@ body
     text-decoration: underline
     color: inherit
     cursor: pointer
+    display: inline-block
+    vertical-align: middle
     &_blue
         color: $blueDark
     &:hover
@@ -866,27 +874,24 @@ body
     &__dropmenu
         display: none
 
-.breadcrumbs
+.breadcrumb
     font-size: 0.9em
+    display: flex
+    list-style: none
+    flex-wrap: wrap
     a
-        color: $blueDark 
-    &__item
-        color: inherit
-        margin-right: 30px
+        color: $blueDark
         text-decoration: underline
-        position: relative
-        &:after
-            content: '|'
-            position: absolute
-            right: -15px
-            top: -1px
-            color: #333
-        &:last-child
+        &:hover
             text-decoration: none
-            &:after
-                display: none
-    a:hover
-        text-decoration: none
+    &__item
+        &  + .breadcrumb__item
+            &:before
+                content: '|'
+                display: inline-block
+                padding: 0 8px
+                color: #333
+
 
 
 .page-header
@@ -1159,7 +1164,14 @@ body
     &__more-link
         padding-top: 15px
         text-align: right
-
+    &__descr
+        height: 60px
+        overflow: hidden
+    &.full-text
+        .description-box__descr
+            height: auto
+        .description-box__more-link
+            display: none
 .counter-list
     list-style: none
     counter-reset: counter-list
@@ -1297,12 +1309,12 @@ body
         &:last-child
             margin-bottom: 0
         &_consent
-            padding-top: 30px
+            padding-top: 2em 
 
 .checkbox-label
     background-color: #cbe3ef
     padding: 10px
-    font-size: 14px
+    font-size: 0.9em
     display: flex
     align-items: center
     &__input
@@ -1402,6 +1414,8 @@ body
 
 .map-section
     position: relative
+    &__title
+        padding: 2em 0
     &__map
         width: 100%
         position: absolute
@@ -1892,6 +1906,7 @@ body
         .soc-list
             margin-bottom: 15px
 
+
     .page-footer-info
         display: block
         text-align: center
@@ -1926,14 +1941,35 @@ body
     .page-header__contacts-section
         position: absolute
         top: 100%
-        width: 250px
-        right: 0
+        left: 10px
+        right: 10px
         background-color: $blue
         color: #fff
-        border-top: 2px solid #fff
+        margin-top: 20px
+        font-size: 1.2em
+        line-height: 1.2em
+        &:before
+            content: ''
+            +arr(22,14,$blue,t)
+            position: absolute
+            top: -14px
+            right: 8%
 
     .page-header__top-container
-        display: block
+        flex-direction: column
+        align-items: flex-start
 
     .page-footer__main-container
         display: block
+
+    .page-header__top-item
+        order: 1
+
+    .page-header__top-item_phone
+        order: 0
+
+    .infographic-box_phone
+        pointer-events: auto
+        font-size: 1.2em
+        .infographic-box__circle
+            display: none

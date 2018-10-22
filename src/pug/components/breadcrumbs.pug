@@ -1,4 +1,6 @@
 mixin breadcrumbs(thisPage)
-    nav.breadcrumbs
-        a(href='#').breadcrumbs__item Главная
-        span.breadcrumbs__item= thisPage
+    nav(aria-label="breadcrumb")
+        ol.breadcrumb
+            li.breadcrumb__item
+                a(href='#') Главная
+            li(aria-current="page").breadcrumb__item= thisPage
