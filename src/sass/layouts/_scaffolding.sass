@@ -918,6 +918,8 @@ body
         padding: 0 5px
     &__top-item
         padding: 5px
+        &_button
+            display: none
     &__bottom-section
         padding: 0 10px
         position: relative
@@ -1954,7 +1956,7 @@ body
         right: 10px
         background-color: $blue
         color: #fff
-        margin-top: 20px
+        margin-top: 25px
         font-size: 1.2em
         line-height: 1.2em
         &:before
@@ -1973,9 +1975,13 @@ body
 
     .page-header__top-item
         order: 1
+        width: 100%
 
     .page-header__top-item_phone
         order: 0
+
+    .page-header__top-item_button
+        display: block
 
     .infographic-box_phone
         pointer-events: auto
