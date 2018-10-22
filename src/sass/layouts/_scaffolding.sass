@@ -37,6 +37,10 @@ $gradientYellow: linear-gradient(#ffeb0c, #ebb306)
     display: none
 
 .impaired-opened
+    .header-main-box__logo
+        display: none
+    .header-main-box__logo_impaired
+        display: block
     .page-header__top-item_impaired
         display: none
     .main-nav-item__link::before
@@ -689,6 +693,8 @@ body
     display: flex
     align-items: center
     justify-content: space-between
+    &__logo_impaired
+        display: none
     &__mobile-contacts
         display: none
         outline: none
@@ -1800,6 +1806,9 @@ body
 @media screen and (max-width: 768px)
     body
         font-size: 12px !important
+
+    .table-box__title-box
+        max-width: 100%
 
     .map-section__contacts
         width: 250px
