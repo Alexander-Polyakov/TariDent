@@ -49,6 +49,10 @@ $gradientYellow: linear-gradient(#ffeb0c, #ebb306)
         border-color: transparent
         &:hover
             border-color: transparent
+    .contacts-map__header
+        display: none
+        &_impaired
+            display: block
 
 [data-body-fz='16']
     font-size: 16px
@@ -88,7 +92,7 @@ $gradientYellow: linear-gradient(#ffeb0c, #ebb306)
         background-color: #fff
     .map-section
         border-bottom: 2px solid #000 
-    .breadcrumbs a
+    .breadcrumb a
         color: inherit
     .small-slider .owl-nav button.owl-next, .small-slider .owl-nav button.owl-prev
         border-left: 10px solid #000
@@ -199,6 +203,8 @@ $gradientYellow: linear-gradient(#ffeb0c, #ebb306)
 [data-body-scheme='black']
     background-color: #000 
     color: #fff
+    .breadcrumb__item + .breadcrumb__item:before
+        color: #fff
     .field-label__title
         color: #fff !important
     .up-page-button:before
@@ -226,7 +232,7 @@ $gradientYellow: linear-gradient(#ffeb0c, #ebb306)
         background-color: #000 
     .map-section
         border-bottom: 2px solid #000
-    .breadcrumbs a
+    .breadcrumb a
         color: inherit
     .small-slider .owl-nav button.owl-next, .small-slider .owl-nav button.owl-prev
         border-left: 10px solid #fff
@@ -1470,6 +1476,8 @@ body
         padding-bottom: 20px
         margin-bottom: 30px
         text-align: center
+        &_impaired
+            display: none
     &__logo
         width: 230px
 
