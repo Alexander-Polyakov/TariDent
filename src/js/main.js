@@ -107,7 +107,7 @@ $(document).ready(function() {
         nav: true,
         margin: 0,
         items: 1,
-        loop: true 
+        loop: true
     });
 
     function openPopup(popupName, _this){
@@ -166,8 +166,6 @@ $(document).ready(function() {
         $(this).closest(".js-field-label").addClass("focused");
     });
 
-
-    $('input[type="tel"]').inputmask({"mask": "+7 (999) 999-9999"});
 
     $(".description-box .js-full-descr").click(function () {
         $(this).closest(".description-box").addClass("full-text");

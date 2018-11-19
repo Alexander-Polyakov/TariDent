@@ -2,4 +2,3 @@
 
 //= ../../node_modules/owl.carousel/src/js/owl.carousel.js
 //= ../../node_modules/owl.carousel/src/js/owl.navigation.js
-//= ./plugins/input.mask.js

@@ -107,7 +107,7 @@ html
                                                             img(src='./images/slide1.png').small-slider__image
 
 
-                        .parallax-section(style='background-image: url("./images/parallax-img1.jpg")')
+                        .parallax-section(style="background-image: url('./images/parallax-img1.jpg')")
                             .parallax-section__inner
                                 i.parallax-section__icon.icon-attention-circled
                                 .parallax-section__content В клинике ТАРИ-ДЕНТ удаление зуба происходит быстро и безболезненно. <br/> Но прежде чем вырывать зуб, врач-стоматолог обязательно попытается его спасти.
@@ -142,12 +142,12 @@ html
                                                     .st-form__line
                                                         label.field-label.js-field-label
                                                             input(type="text").input.field-label__field
-                                                            .field-label__title Ваше имя *
+                                                            span.field-label__title Ваше имя *
                                                             i.field-label__border
                                                     .st-form__line
                                                         label.field-label.js-field-label
                                                             input(type="tel").input.field-label__field
-                                                            .field-label__title Номер телефона *
+                                                            span.field-label__title Номер телефона *
                                                             i.field-label__border
                                                     .st-form__line.st-form__line_consent
                                                         label.checkbox-label
@@ -172,6 +172,13 @@ html
                                                         .footnote-box__arrow
                                                 .description-box__main.js-collapse-dropdown
                                                     .description-box__descr.st-text
+                                                        ul
+                                                            li Проблемы, связанные с зубом мудрости, роблемы, связанные с зубом мудрости, роблемы, связанные с зубом мудрости, роблемы, связанные с зубом мудрости, роблемы, связанные с зубом мудрости,
+                                                            li Проблемы, связанные с зубом мудрости,
+                                                            li Проблемы, связанные с зубом мудрости,
+                                                            li Проблемы, связанные с зубом мудрости,
+                                                            li Проблемы, связанные с зубом мудрости,
+
                                                         p Проблемы, связанные с зубом мудрости, встречаются практически у каждого человека. Сложности с прорезыванием, неправильное положение в челюсти, боли и дискомфорт. Генетические изменения, связанные с потреблением обработанной пищи, изменяют кости челюсти человека – они становятся меньше, зубам мудрости не поместиться в их обычном положении.
                                                         p Проблемы, связанные с зубом мудрости, встречаются практически у каждого человека. Сложности с прорезыванием, неправильное положение в челюсти, боли и дискомфорт. Генетические изменения, связанные с потреблением обработанной пищи, изменяют кости челюсти человека – они становятся меньше, зубам мудрости не поместиться в их обычном положении.
                                                         p Проблемы, связанные с зубом мудрости, встречаются практически у каждого человека. Сложности с прорезыванием, неправильное положение в челюсти, боли и дискомфорт. Генетические изменения, связанные с потреблением обработанной пищи, изменяют кости челюсти человека – они становятся меньше, зубам мудрости не поместиться в их обычном положении.
@@ -261,7 +268,7 @@ html
                                                                 .contact-item__header
                                                                     i.contact-item__icon.icon-phone
                                                                     .contact-item__title Телефон:
-                                                                .contact-item__main +7 (473) 205-92-56
+                                                                a(href='tel:+7 (473) 205-92-56').contact-item__main.contact-item__main_phone +7 (473) 205-92-56
                                                         .contacts-list__item
                                                             .contact-item
                                                                 .contact-item__header

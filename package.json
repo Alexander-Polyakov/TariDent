@@ -1,17 +1,17 @@
 {
-  "name": "foundation-project-template",
-  "version": "1.0.2",
+  "name": "Velest",
+  "version": "1.0.0",
   "private": true,
-  "description": "Simple boilerplate Gulp + Rigger + Sass + Foundation + BrowserSync",
+  "description": "Velest",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Amir Gafurov <gafurovamir@gmail.com>",
+  "author": "Velest",
   "license": "ISC",
   "dependencies": {
-    "@fancyapps/fancybox": "^3.2.5",
-    "browser-sync": "^2.11.2",
+    "@fancyapps/fancybox": "^3.5.2",
+    "browser-sync": "^2.26.3",
     "gulp": "^3.8.1",
     "gulp-autoprefixer": "*",
     "gulp-cssmin": "*",
@@ -30,7 +30,7 @@
     "imagemin-pngquant": "*",
     "jquery-form-validator": "^2.3.79",
     "jquery-parallax.js": "^1.5.0",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.9.4",
     "owl.carousel": "^2.3.3",
     "rimraf": "*"
   },

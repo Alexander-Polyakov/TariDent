@@ -508,6 +508,7 @@ body
     color: #333
     font-family: inherit
     transition: all 0.3s ease 0s
+    outline: none
     &.error
         color: $red
         border-color: $red
@@ -523,6 +524,7 @@ body
     color: #333
     transition: all 0.3s ease 0s
     font-family: inherit
+    outline: none
 
 
 .st-link
@@ -594,9 +596,14 @@ body
         list-style: none
         li
             margin-bottom: 20px
+            position: relative
+            padding-left: 10px
             &:before
                 content: '-'
                 margin-right: 5px
+                position: absolute
+                top: 0
+                left: 0
             &:last-child
                 margin-bottom: 0
     &_large_margin
@@ -647,16 +654,14 @@ body
     display: block
     &__title
         position: absolute
-        left: 1px
+        top: 1px
         line-height: 48px
         background-color: #fff
         padding: 0 15px
         font-size: 14px
         pointer-events: none
-        transition: all 0.3s ease 0s
-        top: 1px
-        right: 1px
-        bottom: 1px
+        transition: all 0.3s ease 0s, background 0s ease 0s
+        left: 1px
     &__border
         content: ''
         height: 2px
@@ -731,7 +736,9 @@ body
         margin-bottom: 10px
     &__phone
         font-size: 1.7em
-        line-height: 1 2em
+        line-height: 1.2em 
+        color: inherit
+        text-decoration: none
     &__tablet-button
         display: none
     &__tablet-nav
@@ -1261,7 +1268,7 @@ body
     display: flex
     align-items: center
     justify-content: center
-    background-position: center
+    background-position: center center
     &:before
         content: ''
         position: absolute
@@ -1500,6 +1507,10 @@ body
         font-weight: 700
     &__main
         line-height: 1.5em
+        &_phone
+            color: inherit
+            pointer-events: none
+            text-decoration: none
 
 .soc-list
     &__item
@@ -1769,7 +1780,6 @@ body
 
     .form-popup
         margin: 50px auto
-        width: 90%
 
     .desktop-hidden
         display: block
@@ -1803,6 +1813,9 @@ body
         display: none
 
 @media screen and (max-width: 992px)
+    .contact-item__main_phone
+        pointer-events: auto
+
     body
         font-size: 14px !important
 
@@ -1814,6 +1827,13 @@ body
 
 
 @media screen and (max-width: 768px)
+    .form-popup
+        width: 95%
+        padding: 30px 15px 15px
+        &__close
+            top: 5px
+            right: 5px
+
     body
         font-size: 12px !important
 
@@ -1880,6 +1900,7 @@ body
 
     .parallax-section
         height: 300px
+        background-attachment: inherit
         &__inner
             width: 100%
             padding: 10px
